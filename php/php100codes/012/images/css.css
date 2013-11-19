@@ -1,0 +1,80 @@
+td {
+	line-height: 16pt;
+	font-size: 10pt;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FF3333;
+}
+body {
+	font-size: 10pt;
+	line-height: 13pt;
+	background-color: #ECF5FF;
+}
+.border {
+	border: 1px solid #1D5892;
+}
+textarea {
+	font-size: 8pt;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	border: 1px solid #999999;
+	padding: 5px;
+
+
+}
+select {
+	font-size: 8pt;
+	padding: 1px;
+	font-family: "Tahoma";
+}
+.a1:link {
+	color: #FFFFFF;
+}
+.a1:visited {
+	color: #FFFFFF;
+}
+.a1:hover {
+	color: #FF9900;
+}
+.font14 {
+	font-size: 14px;
+	font-family: "Tahoma";
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}
+.alpha {
+	filter: Alpha(Opacity=20);
+}
+.filearea {
+	font-size: 9pt;
+}
+.textdrow {
+	color:#666666;
+	filter: DropShadow(Color=white, OffX=1, OffY=1, Positive=1);
+}
+.font18 {
+	font-size: 19px;
+}
+.p {
+	text-indent: 24px;
+}
+.font16 {
+	font-size: 16px;
+}
+.border2 {
+	border: 1px solid #D5E4F4;
+}
+.xborder {
+	border: 2px dotted #EBF5FE;
+}

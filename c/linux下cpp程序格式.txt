@@ -1,0 +1,10 @@
+#include <iostream>	//attention:iostream
+using namespace std;
+
+int // must be int
+main(void)
+{
+	cout<<"hello,word"<<endl;
+	
+	return 0;
+}

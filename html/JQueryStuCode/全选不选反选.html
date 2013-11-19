@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#setAll").click(function(){
+		$("#playlist :checkbox").attr("checked",true);	//#playlist :checkbox空格不能少
+	});	
+	
+	$("#unsetAll").click(function(){
+		$("#playlist :checkbox").attr("checked",false);	
+	});
+	
+	$("#inverse").click(function(){
+		$("#playlist :checkbox").each(function(){
+			$(this).attr("checked",!$(this).attr("checked"));	
+		});
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+<div id="playlist">
+ <input type="checkbox" value="歌曲1" />歌曲1 <br />
+ <input type="checkbox" value="歌曲2" />歌曲2<br />
+ <input type="checkbox" />歌曲3<br />
+ <input type="checkbox" />歌曲4<br />
+ <input type="checkbox" />歌曲5<br />
+ <input type="checkbox" />歌曲6<br />
+ <input type="checkbox" />歌曲7<br />
+</div> 
+ <input type="button" value="全选" id="setAll" />
+ <input type="button" value="不选" id="unsetAll" />
+ <input type="button" value="反选" id="inverse" />
+</body>
+</html>

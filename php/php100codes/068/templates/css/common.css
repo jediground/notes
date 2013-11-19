@@ -1,0 +1,72 @@
+/* 全局样式 */
+*{
+   margin:0;
+   padding:0;
+}
+
+body{
+   text-align:center;
+   font:normal 12px "宋体", Verdana, Arial, Helvetica, sans-serif;
+}
+
+div,span,p,ul,li,dt,dd,h1,h2,h3,h4,h5,h5,h7{
+   text-align:left;
+}
+
+img{border:none;}
+
+.clear{
+   font-size:1px;
+   width:1px;
+   height:1px;
+   visibility:hidden;
+   clear:both;
+}
+
+ul,li{
+   list-style-type:none;
+}
+
+/* 链接样式 */
+a,a:link,a:visited{
+   color:#000;
+   text-decoration:none;
+}
+
+a:hover{
+   color:#BC2931;
+   text-decoration:underline;
+}
+
+.cdred,a.cdred:link,a.cdred:visited{color:#C80000;}
+.cwhite,a.cwhite:link,a.cwhite:visited{color:#FFF;background-color:transparent;}
+.cgray,a.cgray:link,a.cgray:visited{color:#6B6B6B;}
+.cblue,a.cblue:link,a.cblue:visited{color:#1F3A87;}
+.cred,a.cred:link,a.cred:visited{color:#FF0000;}
+
+.margin-r24px{
+   margin-right:24px;
+}
+
+/* 字体大小*/
+.f12px{ font-size:12px;}
+.f14px{ font-size:14px;}
+
+/* 字体颜色 */
+.fgreen{color:green;}
+.fred{color:#FF0000;}
+.fdred{color:#bc2931;}
+.fdblue{color:#344E71;}
+.fdblue-1{color:#1c2f57;}
+.fgray{color:#999;}
+.fblack{color:#000;}
+
+/* 其他属性 */
+.txt-left{text-align:left;}
+.txt-center{text-align:center;}
+.left{ float: left;}
+.right{ float: right;}
+.hidden {display: none;}
+.unline,.unline a{text-decoration: none;}
+.noborder{border:none;	}
+.nobg{background:none;}

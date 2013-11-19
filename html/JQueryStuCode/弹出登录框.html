@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#login").click(function(){
+			$("#loginDiv").css("display","");		
+		});
+		
+		$("#hid").click(function(){
+			$("#loginDiv").css("display","none");		
+		});
+	});
+	
+
+</script>
+</head>
+
+<body>
+<u id="login" style="cursor:pointer">登录</u>
+<div style="position:absolute;top:40%;left:40%;border-style:solid;border-color:blue;display:none;" id="loginDiv">
+<img src="xx.jpg" id="hid" style="display:block;float:right;cursor:pointer" />
+<table>
+<tr><td><label for="usr">用户名：</label></td><td><input id="usr" type="username" /></td></tr>
+<tr><td><label for="pw">密	&nbsp;码：</label></td><td><input id="pw" type="password" /></td></tr>
+	
+</table>
+
+</div>
+
+</body>
+</html>

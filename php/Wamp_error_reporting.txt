@@ -1,0 +1,7 @@
+Notice: Undefined index: submit in D:\wamp\www\bbs\add.php on line 9
+解决方案：
+修改 php.ini 的错误配置，如下：
+
+error_reporting  =  E_ALL & ~E_NOTICE 
+
+修改好以后，重启 Apache  ，就可以不用 isset 来判断了。

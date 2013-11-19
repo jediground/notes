@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<php100 id="2">
+  <index>test test</index>
+</php100>
+<php100 id="3">
+  <index>new xml content</index>
+</php100>
+
+</root>

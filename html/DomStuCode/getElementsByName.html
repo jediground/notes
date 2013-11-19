@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>ª∂”≠π‚¡Ÿ±æ’æ£°</title>
+<script type="text/javascript">
+	function btnClick(){
+		var radios = document.getElementsByName("gender");
+		for(var i = 0; i <radios.length; i++)
+		{
+			var radio = radios[i];
+			alert(radio.value);
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<input type="radio" name="gender" value="male"/>male
+<input type="radio" name="gender" value="famale" />famale
+<input type="radio" name="gender" value="null" />null
+<input type="submit" value="click" onclick="btnClick()" />
+
+
+</body>
+</html>

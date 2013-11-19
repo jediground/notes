@@ -1,0 +1,30 @@
+if (is_uploaded_file($_FILES['upfile']['tmp_name'])){
+
+$upfile=$_FILES["upfile"];
+
+}
+
+$name = $upfile["name"];
+$type = $upfile["type"];
+$size = $upfile["size"];
+$tmp_name = $upfile["tmp_name"];
+
+
+
+switch ($type) {
+	case 'image/pjpeg' :
+		break;
+	case 'image/jpeg' :
+		break;
+	case 'image/gif' :
+		break;
+	case 'image/png' :
+		break;
+}
+
+
+
+if (move_uploaded_file($tmp_name,'up/'.$name)) {
+	echo "上传成功";
+ }
+}

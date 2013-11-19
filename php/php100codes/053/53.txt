@@ -1,0 +1,12 @@
+[php] 
+function inject_check($sql_str) { 
+   $check=eregi('select|insert|update|delete|\'|\/\*|\*|\.\.\/|\.\/|union|into|load_file|outfile', $sql_str);     // 进行过滤 
+   if($check){ 
+       echo "输入非法注入内容！"; 
+       exit(); 
+   }else{ 
+       return $sql_str; 
+   } 
+
+} 
+[/php] 

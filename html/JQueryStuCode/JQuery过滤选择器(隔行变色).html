@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+//$("div:first")选取第一个<div>
+//$("div:last")选取最后一个<div>
+//$("input:not(.myClass)")选取样式名不是myClass的<input>
+//$("input:even")选取索引时奇数的<input>
+//$("input:ocld")选取索引时偶数的<input>
+//:eq、:gt、:lt选取索引等于、大于、小于索引序列号的元素。eg：$(input:lt(5))选取索引小于5的<input>
+//$(":header")选取所有的h1....h6元素
+//$("div:animated")选取正在执行动画的<div>元素
+
+$(function(){
+	$("#tab tr:first").css("fontSize","30");//仅IE支持
+	$("#tab tr:last").css("color","red");
+	$("#tab tr:gt(0):lt(4)").css("fontSize","24");//lt(3)是从gt(0)出的新序列中的序号.
+	$("#tab tr:gt(0):even").css("background","olive");
+	});
+</script>
+</head>
+
+<body>
+<table id="tab">
+<tr><td>姓名</td><td>成绩</td></tr>
+<tr><td>Eric</td><td>223</td></tr>
+<tr><td>Tom</td><td>246</td></tr>
+<tr><td>Alex</td><td>234</td></tr>
+<tr><td>Lucy</td><td>234</td></tr>
+<tr><td>Jake</td><td>243</td></tr>
+<tr><td>平均</td><td>***</td></tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

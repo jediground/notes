@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){alert($('#divF').html());});//$('#divF').html()等价于document.getElementById("divF").innerHTML;
+
+	$(function(){$('#divF').css('background','green');});//css修改层背景
+	$(function(){alert($('#divF').css('background'));});
+
+	$(function(){$('#txt').val(new Date());});//赋值
+	$(function(){$('#txt').val();});//取值
+	
+	$(function(){$("#divS").html("<a href='#'>点击这里</a>");});//赋值
+	$(function(){alert($('#divS').html());});//取值,   .text()同理
+	
+</script>
+</head>
+
+<body>
+<div id="divF"><font color="red">HELLO</font></div>
+<input id="txt" type="text" />
+<div id="divS"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

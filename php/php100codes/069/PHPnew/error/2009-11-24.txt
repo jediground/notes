@@ -1,0 +1,30 @@
+错误SQL语句：
+SELECT * FROM p_newsbase where cid= limit 5 order by id desc
+客户IP:127.0.0.1
+时间 :2009-11-24 13:52:05
+
+错误SQL语句：
+SELECT * FROM p_newsbase where cid=3 limit 5 order by id desc
+客户IP:127.0.0.1
+时间 :2009-11-24 13:52:09
+
+错误SQL语句：
+SELECT * FROM p_newsbase where cid=  order by id desc limit 5
+客户IP:127.0.0.1
+时间 :2009-11-24 13:52:32
+
+错误SQL语句：
+SELECT * FROM p_newsbase where cid= limit 5 order by id desc
+客户IP:127.0.0.1
+时间 :2009-11-24 13:54:08
+
+错误SQL语句：
+SELECT * FROM p_newsbase where cid=3 limit 5 order by id desc
+客户IP:127.0.0.1
+时间 :2009-11-24 13:54:10
+
+错误SQL语句：
+SELECT * FROM p_newsbase where cid= order by id desc limit 5
+客户IP:127.0.0.1
+时间 :2009-11-24 13:54:29
+

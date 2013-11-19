@@ -1,0 +1,30 @@
+1、什么是 PHP JPGraph 图表类 
+2、PHP JPGraph 安装配置方法 
+3、PHP JPGraph 的简单应用及案例 
+
+
+背景：以前用PHP作图时必须要掌握复杂抽象的画图函数，或者借助一些网上下 
+载的花柱形图、饼形图的类来实现，但没有统一完整的图表类可以实现很多功能。 
+
+现在我们有了一个新的选择：JpGraph。专门提供图表的类库。它使得作图变成了 
+一件非常简单的事情，你只需从数据库中取出相关数据，定义标题，图表类型，然 
+后的事情就交给JpGraph，只需掌握为数不多的JpGraph内置函数（可以参照 
+JpGraph附带例子学习），就可以画出非常炫目的图表！ 
+
+require_once (‘jpgraph/jpgraph.php’); // 载入基本类 
+require_once (‘jpgraph/jpgraph_pie.php’); // 载入饼图类 
+
+$data = array(40,60,21,33,12,33); // 初始数据 
+
+$graph = new PieGraph(150,150); // 创建一个新图和尺寸 
+$graph->SetShadow(); // 创建初始化 
+
+$graph->title->Set(“‘sand’ Theme”); // 设置图片头部文字 
+$graph->title->SetFont(FF_FONT1,FS_BOLD); //设置字体类型 
+
+$p1 = new PiePlot($data); // 实例化饼图并载入初始数据 
+$p1->SetTheme(“sand”); //设置样式 
+$p1->SetCenter(0.5,0.55); //设置饼图位置 
+$p1->value->Show(false); // 是否输出值 
+$graph->Add($p1); // 增加合并样式 
+$graph->Stroke(); //输出 

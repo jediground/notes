@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+//next()方法用于获得节点之后的挨着的第一个同辈元素
+//nextAll()方法用于获得节点之后所有的同辈元素
+	$(function(){
+		//$('div').click(function(){alert($(this).next().text());});
+		//$('div').click(function(){$.each($(this).nextAll('div'),function(){$(this).css("background","green");})});//自动隐式迭代
+		$('div').click(function(){$(this).nextAll("div").css("background","olive");});
+
+		
+	});
+</script>
+</head>
+
+<body>
+<div>aaa</div>
+<div>bbb</div>
+<div>ccc</div>
+<div>ddd</div>
+<div>eee</div>
+
+</body>
+</html>

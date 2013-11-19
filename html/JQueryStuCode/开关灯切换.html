@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+	.cs1{
+		background-color:red;	
+	}
+	.cs2{
+		font-size:24px;		
+	}
+	.day{
+		background-color:white;		
+	}
+	.night{
+		background-color:black;			
+	}
+</style>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#add").click(function(){
+			$("#divF").addClass("cs2");	
+		});	
+		
+		$("#remove").click(function(){
+			$("#divF").removeClass("cs2");	
+		});
+		
+		$("#toggle").click(function(){
+			$("#divF").toggleClass("cs2");	
+		});	
+		
+		$("#kgd").click(function(){
+			$(document.body).toggleClass("night");	
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="divF" class="cs1">
+	粉色的信笺，盛满我的思恋	
+</div>
+<input type="button" value="Add" id="add" />
+<input type="button" value="Remove" id="remove" />
+<input type="button" value="切换" id="toggle" />
+<input type="button" value="开关灯" id="kgd" />
+</body>
+</html>

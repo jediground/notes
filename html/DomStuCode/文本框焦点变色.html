@@ -1,0 +1,46 @@
+	<!DO	CTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+function initEvent(){
+	var inputs = document.getElementsByTagName("input");
+	for(var i=0; i<inputs.length; i++){
+		var input = inputs[i];
+		if(input.type="text"){//只有文本框才变色
+			//input.onfocus = trOnfocus;
+			input.onblur = trOnblur;
+			//匿名函数写法:
+			input.onfocus = function(){this.style.background = "red";}
+			//input.onblur = function(){this.style.background = "white";}
+		}
+	}	
+}
+
+function trOnfocus(){
+	this.style.background = "red";
+}
+
+function trOnblur(){
+	this.style.background = "white";
+}
+
+
+</script>
+</head>
+
+<body>
+
+<body onload="initEvent()">
+
+<input type="text" />
+<input type="text" />
+<input type="text" />
+<input type="text" />
+<input type="text" />
+
+
+
+
+</body>
+</html>

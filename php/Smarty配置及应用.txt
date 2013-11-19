@@ -1,0 +1,100 @@
+1.新建并配置smarty_inc.php
+	include_once("Smarty/Smarty.class.php"); //包含smarty类文件
+
+	$smarty = new Smarty(); //建立smarty实例对象$smarty
+
+// 目录不可更改，直接用就是了
+	$smarty->config_dir="Smarty/Config_File.class.php";  // 目录变量
+
+	$smarty->caching=false; //是否使用缓存，项目在调试期间，不建议启用缓存
+
+	$smarty->template_dir = "./templates"; //设置模板目录
+
+	$smarty->compile_dir = "./templates_c"; //设置编译目录
+
+	$smarty->cache_dir = "./caches"; //缓存文件夹
+
+	//----------------------------------------------------
+
+	//左右边界符，默认为{}，但实际应用当中容易与JavaScript相冲突
+
+	//----------------------------------------------------
+
+	$smarty->left_delimiter = "{";
+
+	$smarty->right_delimiter = "}";
+
+
+2.Smarty的应用：变量，循环…
+	$smarty->assign("模板变量", "值(数组/变量)");
+	$smarty->display("模板名称");  
+	
+	$smarty->assign("name", "PHP100中文站"); //进行模板变量替换
+	$smarty->display("index.htm");  // 该文件就是模板文件，应该在模板目录下
+
+	<html>
+	<title>{$name}</title>
+	</html>
+
+	section(二维数组)：数组是最常用的方式，可以帮助我们循环列表，和快速访问打理数据，如果要循环数组我们可以使用Smarty内置的方法section
+
+	{section name=s loop=$stu}
+
+	{$stu[s].values}
+
+	{sectionelse} 
+
+	无内容
+
+	{/section}
+
+
+
+	注意：
+	$smarty->assign('article',$news);
+	$smarty->display('index.html');最好写在页末
+	顺序不能颠倒
+
+foreach（一维数组）
+	{foreach from=$name item=id}
+	    id:{$id}<br />
+	{/foreach}
+
+	{foreach from=$name item=v key=j}
+	    {$j}:{$v}<br />
+	{/foreach}
+
+include多功能使用
+	{include file="header.html"}
+	{include file="header.html" title="Main Menu"}
+
+if
+	{if #name == 'OK'}
+	{esle}
+	{/if}
+
+
+3.缓存的配置、使用、清除
+	$smarty->cache_dir = "/caches/";  // 设置缓存目录
+	$smarty->caching = true;  // 开启缓存,为flase的时侯缓存无效
+	$smarty->cache_lifetime = 60;  // 缓存时间
+
+	smarty->display('cache.tpl', cache_id);  //创建带ID的缓存
+
+	$smarty->clear_all_cache(); //清除所有缓存
+	$smarty->clear_cache('index.htm'); //清除index.tpl的缓存
+	$smarty->clear_cache('index.htm',cache_id); //清除指定id的缓存
+
+	insert 函数默认是不缓存的。并且这个属性不能修改
+	// index.htm
+	<div>{insert name="get_time"}</div>
+
+	//index.php
+	function insert_get_time(){// insert为方法前缀,模板中不需要用saaign()方法了
+	    return date("Y-m-d H:i:s");
+	}
+
+	smarty_block 函数功能更加强大，使用方法同上
+	{blockname}
+	    没有缓存的:{$smarty.now}
+	{/blockname}

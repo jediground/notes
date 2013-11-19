@@ -1,0 +1,28 @@
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- 数据库: `member`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user_list`
+--
+
+CREATE TABLE `user_list` (
+  `uid` int(11) NOT NULL auto_increment,
+  `m_id` varchar(5) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  PRIMARY KEY  (`uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=gb2312 AUTO_INCREMENT=11 ;
+
+--
+-- 导出表中的数据 `user_list`
+--
+
+INSERT INTO `user_list` (`uid`, `m_id`, `username`, `password`) VALUES
+(9, '1', 'admin', '75cf565ad38d0f837c43363e402b1a00'),
+(10, '2', 'admin2', '75cf565ad38d0f837c43363e402b1a00');

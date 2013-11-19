@@ -1,0 +1,41 @@
+Apache配置：
+
+支持httpd.conf 配置和目录 .htaccess配置
+
+启用rewrite：
+# LoadModule rewrite_module modules/mod_rewrite.so
+去除前面的 #
+LoadModule rewrite_module modules/mod_rewrite.so
+
+启用.htaccess：
+AllowOverride None    修改为： AllowOverride All
+
+
+mod_rewrite 规则的使用
+
+RewriteEngine on // 启动引擎
+RewriteRule ^/test([0-9]*).html$ /test.php?id=$1 // 判断主机
+RewriteRule ^/new([0-9]*)/$ /new.php?id=$1 [R]  // 跳转到...
+eg:
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} !^www.php100.com  [NC]  
+RewriteRule   ^/(.*) http://www.php100.com/ [L]
+
+
+mod_rewrite 规则修正符
+
+1) R 强制外部重定向
+2) F 禁用URL,返回403HTTP状态码。
+3) G 强制URL为GONE，返回410HTTP状态码。
+4) P 强制使用代理转发。
+5) L 表明当前规则是最后一条规则，停止分析以后规则的重写。
+6) N 重新从第一条规则开始运行重写过程。
+7) C 与下一条规则关联
+
+如果规则匹配则正常处理，以下修正符无效
+
+8) T=MIME-type(force MIME type) 强制MIME类型
+9) NS  只用于不是内部子请求
+10) NC 不区分大小写
+11) QSA 追加请求字符串
+12) NE 不在输出转义特殊字符   \%3d$1  等价于 =$1

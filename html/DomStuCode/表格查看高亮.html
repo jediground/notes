@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>ª∂”≠π‚¡Ÿ±æ’æ£°</title>
+<script type="text/javascript">
+function initEvent(){
+	var tableMain = document.getElementById("tableMain");
+	var trs = tableMain.getElementsByTagName("tr");
+	for(var i=0; i<trs.length; i++){
+		var tr = trs[i];
+		tr.onclick = TrOnclick;
+		tr.style.cursor = "pointer";
+	}
+}
+
+function TrOnclick(){
+	var tableMain = document.getElementById("tableMain");
+	var trs = tableMain.getElementsByTagName("tr");
+	for(var i=0; i<trs.length; i++){
+		var tr = trs[i];
+		if(tr == this){
+			tr.style.background = "yellow";
+		}else{
+			tr.style.background = "white";
+		}
+		
+	}
+}
+
+</script>
+</head>
+
+<body onload="initEvent()">
+<table id="tableMain">
+<tr><td>Micheal</td><td>34</td></tr>
+<tr><td>Fell</td><td>30</td></tr>
+<tr><td>Jim</td><td>23</td></tr>
+<tr><td>Pack</td><td>33</td></tr>
+<tr><td>Lucy</td><td>22</td></tr>
+<tr><td>Lili</td><td>24</td></tr>
+
+
+</table>
+
+</body>
+</html>

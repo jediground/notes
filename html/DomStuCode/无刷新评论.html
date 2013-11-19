@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" >
+<head> <title>欢迎光临本站！</title>
+<script type="text/javascript">
+function addComm(){
+	var nickname=document.getElementById("nickname").value;
+	var comment=document.getElementById("comment").value;
+
+	var tableComment = document.getElementById("tableComment");
+
+	//var tr = document.createElement("tr");
+	var tdNickName = document.createElement("td");
+	tdNickName.innerHTML = nickname+":";
+	tableComment.appendChild(tdNickName);
+
+	var tdComment = document.createElement("td");
+	tdComment.innerHTML = comment;
+	tableComment.appendChild(tdComment);
+}
+</script>
+</head>
+
+<body>
+<table id="tableComment">
+	<tbody>
+		<tr><td>一楼：</td><td>沙发</td></tr>
+	</tbody>
+
+</table>
+
+昵称：<input type="text" id="nickname" /><br />
+评论：<textarea id="comment"></textarea><br /><br />
+<input type="button" value="评论" onclick="addComm()">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

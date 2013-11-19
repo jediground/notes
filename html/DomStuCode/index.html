@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+    <title>欢迎光临本站！</title>
+</head>
+
+<body>
+<input type="button" value="跳转到百度" onclick="location.href='http://www.baidu.com'" /><!--chrome、firefox、IE均可-->
+<input type="button" value="跳转到谷歌" onclick="navigate('http://www.google.com')" /><!--chrome、firefox不能实现效果-->
+<input type="button" value="刷新当前页面" onclick="location.reload()">
+<a href="http://www.facebook.com" onclick="alert('禁止访问！');window.event.returnValue=false;">Welcome to Facebook!</a>
+<form action="index-go.aspx" onclick="alert('提交数据出错');window.event.returnValue=false">
+	<input type="submit" value="提交" />
+</form>
+<input type="button" value="分享本页面给好友" onclick="clipboardData.setData('Text','我发现很有趣的页面，好东西，大家应该共享'+location.href);alert('已经将地址复制到粘贴板中，使用Ctrl+v粘贴该内容');" /><!--只用ie使用-->
+
+</body>
+</html>

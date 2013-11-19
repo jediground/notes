@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+	.waiting{
+		color:gray;	
+	}	
+</style>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#kw").val("请输入关键词").addClass("waiting").blur(function(){
+			if($(this).val() == ""){
+				$("#kw").val("请输入关键词").addClass("waiting");	
+			}
+		}).focus(function(){
+			if($("#kw").val() == "请输入关键词"){
+				$("#kw").val("").removeClass("waiting");	
+			}	
+		});	
+	});
+</script>
+</head>
+
+<body>
+<input type="text">
+<input type="text" id="kw" />
+</body>
+</html>

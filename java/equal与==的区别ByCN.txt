@@ -1,0 +1,195 @@
+java中equal和==的比较
+
+默认分类 2009-12-14 19:43:41 阅读131 评论2 字号：大中小
+
+java中equals方法和“==”的区别：
+
+equals 方法是 java.lang.Object 类的方法。
+
+有两种用法说明：
+
+（1）对于字符串变量来说，使用“==”和“equals()”方法比较字符串时，其比较方法不同。
+
+“==”比较两个变量本身的值，即两个对象在内存中的首地址。
+
+“equals()”比较字符串中所包含的内容是否相同。
+
+比如：
+
+String s1,s2,s3 = "abc", s4 ="abc" ;
+
+s1 = new String("abc");
+
+s2 = new String("abc");
+
+那么：
+
+s1==s2 是 false //两个变量的内存地址不一样，也就是说它们指向的对象不 一样，
+
+故不相等。
+
+s1.equals(s2) 是 true //两个变量的所包含的内容是abc，故相等。
+
+注意（1）：
+
+如果： StringBuffer s1 = new StringBuffer("a");
+
+StringBuffer s2 = new StringBuffer("a");
+
+结果： s1.equals(s2) //是false
+
+解释：StringBuffer类中没有重新定义equals这个方法，因此这个方法就来自Object类，
+
+而Object类中的equals方法是用来比较“地址”的，所以等于false.
+
+注意（2）：
+
+对于s3和s4来说，有一点不一样要引起注意，由于s3和s4是两个字符
+
+串常量所生成的变量，其中所存放的内存地址是相等的，
+
+所以s3==s4是true（即使没有s3=s4这样一个赋值语句）
+
+（2）对于非字符串变量来说，"=="和"equals"方法的作用是相同的都是用来比较其
+
+对象在堆内存的首地址，即用来比较两个引用变量是否指向同一个对象。
+
+比如：
+
+class A
+
+{
+
+A obj1 = new A();
+
+A obj2 = new A();
+
+}
+
+那么：obj1==obj2是false
+
+obj1.equals(obj2)是false
+
+但是如加上这样一句：obj1=obj2;
+
+那么 obj1==obj2 是true
+
+obj1.equals(obj2) 是true
+
+总之：equals方法对于字符串来说是比较内容的，而对于非字符串来说是比较
+
+其指向的对象是否相同的。
+
+== 比较符也是比较指向的对象是否相同的也就是对象在对内存中的的首地址。
+
+String类中重新定义了equals这个方法，而且比较的是值，而不是地址。所以是true。
+
+关于equals与==的区别从以下几个方面来说：
+
+（1）如果是基本类型比较，那么只能用==来比较，不能用equals
+
+比如：
+
+public class TestEquals {
+
+public static void main(String[] args)
+
+{
+
+int a = 3;
+
+int b = 4;
+
+int c = 3;
+
+System.out.println(a == b);//结果是false
+
+System.out.println(a == c);//结果是true
+
+System.out.println(a.equals(c));//错误，编译不能通过，equals方法
+
+//不能运用与基本类型的比较
+
+}
+
+}
+
+（2）对于基本类型的包装类型，比如Boolean、Character、Byte、Shot、Integer、Long、Float、Double等的引用变量，==是比较地址的，而equals是比较内容的。比如：
+
+public class TestEquals {
+
+public static void main(String[] args)
+
+{ Integer n1 = new Integer(30);
+
+Integer n2 = new Integer(30);
+
+Integer n3 = new Integer(31);
+
+System.out.println(n1 == n2);//结果是false 两个不同的Integer对象，故其地址不同，
+
+System.out.println(n1 == n3);//那么不管是new Integer(30)还是new Integer(31) 结果都显示false
+
+System.out.println(n1.equals(n2));//结果是true 根据jdk文档中的说明，n1与n2指向的对象中的内容是相等的，都是30，故equals比较后结果是true
+
+System.out.println(n1.equals(n3));//结果是false 因对象内容不一样，一个是30一个是31
+
+}
+
+}
+
+这是Integer的实例，如果是其他的比如Double、Character、Float等也一样。
+
+（3）注意：对于String(字符串)、StringBuffer(线程安全的可变字符序列)、StringBuilder(可变字符序列)这三个类作进一步的说明。
+
+（a）首先，介绍String的用法，请看下面的实例：
+
+public class TestEquals {
+
+public static void main(String[] args) {
+
+String s1 = "123";
+
+String s2 = "123";
+
+String s3 = "abc";
+
+String s4 = new String("123");
+
+String s5 = new String("123");
+
+String s6 = new String("abc");
+
+System.out.println(s1 == s2);//（1）true
+
+System.out.println(s1.equals(s2));//（2）true
+
+System.out.println(s1 == s3);//（3）flase
+
+System.out.println(s1.equals(s3));//（4）flase
+
+System.out.println(s4 == s5);//（5）flase
+
+System.out.println(s4.equals(s5));//（6）true
+
+System.out.println(s4 == s6);//（7）flase
+
+System.out.println(s4.equals(s6));//（8）flase
+
+System.out.println(s1 == s4);//（9）false
+
+System.out.println(s1.equals(s4));//（10）true
+
+}
+
+}
+
+答案解释：s1与s2分别指向由字符串常量”123” 创建的对象，在常量池中，只有一个对象，内容为123，有两个引用s1和s2指向这个对象，故这两个引用变量所指向的地址是相同的，因而（1）处的运行结果为true，又因为s1.equals(s2)是比较s1和s2所指向的对象的内容是否相等，而我们知道这两个对象的内容都是字符串常量”123”，故标记（2）处的运行结果是true。
+
+用同样的方法分析，s1和s3所指向的对象不一样，内容也不一样，故标记（3）和（4）处运行结果是false。
+
+再看看s4和s5，这两个引用变量所指向的对象的内容都是一样的（内容都是123），但是这两个对象是用new操作符创建处类的，是在内存中分配两块空间给这两个对象的，因而这两个对象的内存地址不一样，故事两个不同的对象，标记（5）处的s4 == s5 运行结果为false，但是内容一样，故标记（6）处的s4.equals(s5)运行结果为true。同理，s4和s6所指向的对象地址不同，内容也不相同。故标记（7）（8）处运行结果为false。
+
+s1和s4分别指向两个不同的对象（之所以这样称呼，是因为这两个对象在内存中的地址不相同，故而对象不相同），故标记为（9）处的s1 == s4运行结果为false，而标记为（10）处的s1.equals(s4)运行结果疑问：乍一看结果，有点惊讶，为什么不是true呢，不是说 equals方法是比较内容的吗？
+
+解释：不错，如果在新类中被覆盖了equals方法，就可以用来比较内容的。但是在上面的例子中类Value并没有覆盖Object中的equals方法，而是继承了该方法，因此它就是被用来比较地址的，又v1和v2的所指向的对象不相同，故标记（1）处的v1.equals(v2)运行结果为false，标记为（2）处的v1 == v2运行结果也为false。

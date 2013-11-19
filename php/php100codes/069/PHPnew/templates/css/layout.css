@@ -1,0 +1,180 @@
+#container {
+	MARGIN: 0px auto; WIDTH: 878px
+}
+.content {
+	MARGIN: 0px auto; WIDTH: 878px
+}
+.border_bottom {
+	POSITION: relative
+}
+.border_bottom3 {
+	MARGIN-BOTTOM: 5px
+}
+#logo {
+	FLOAT: left; MARGIN: 23px 0px 10px 18px; WIDTH: 200px; HEIGHT: 75px
+}
+#adv_txt {
+	FLOAT: left; MARGIN: 75px 0px 0px 5px; WIDTH: 639px; HEIGHT: 21px
+}
+#sub_nav {
+	RIGHT: 12px; FLOAT: right; WIDTH: 202px; POSITION: absolute; TOP: 0px; HEIGHT: 26px
+}
+#sub_nav LI {
+	PADDING-RIGHT: 5px; MARGIN-TOP: 1px; DISPLAY: inline; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 5px; WIDTH: 57px; PADDING-TOP: 5px; HEIGHT: 12px; TEXT-ALIGN: center
+}
+#sub_nav LI.nobg {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 58px
+}
+#main_nav {
+	DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 878px; HEIGHT: auto
+}
+#main_nav LI {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 12px; FLOAT: left; PADDING-BOTTOM: 10px; FONT: bold 14px "",sans-serif; WIDTH: 65px; PADDING-TOP: 10px; HEIGHT: 14px
+}
+#main_nav LI.nobg {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#main_nav LI SPAN {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial,sans-serif
+}
+#topad {
+	WIDTH: 876px; HEIGHT: 65px;
+	background:#fff;
+	text-align:center;
+	padding-top:3px;
+}
+#top-adv {
+	WIDTH: 876px; HEIGHT: 181px
+}
+#top-adv IMG {
+	WIDTH: 876px; HEIGHT: 181px
+}
+#top-contact-info {
+	FONT-SIZE: 12px; MARGIN: 0px auto 1px; WIDTH: 190px; LINE-HEIGHT: 150%; PADDING-TOP: 76px; HEIGHT: 76px
+}
+#left-nav-bar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 5px; WIDTH: 210px; PADDING-TOP: 5px
+}
+#left-nav-bar H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; PADDING-BOTTOM: 10px; FONT: bold 15px "",sans-serif; PADDING-TOP: 10px; LETTER-SPACING: 1px; HEIGHT: 15px
+}
+#left-nav-bar UL {
+	MARGIN: 0px; WIDTH: 210px
+}
+#left-nav-bar UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 3px; WIDTH: 200px; PADDING-TOP: 5px; HEIGHT: 12px
+}
+#left-nav-bar H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 25px 0px; FONT: 19px "",sans-serif; PADDING-TOP: 5px; LETTER-SPACING: 2px; HEIGHT: 28px; TEXT-ALIGN: center
+}
+#hits {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; MARGIN: 0px auto; FONT: bold 12px "",sans-serif; WIDTH: 100%; PADDING-TOP: 10px; HEIGHT: 12px; TEXT-ALIGN: center
+}
+#right-cnt {
+	FLOAT: right; WIDTH: 652px
+}
+#right-cnt P {
+	FONT-SIZE: 14px; MARGIN: 0px auto 24px; WIDTH: 96%; LINE-HEIGHT: 150%
+}
+P#location {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 6px; MARGIN: 0px auto; WIDTH: 647px; TEXT-INDENT: 0px; PADDING-TOP: 6px
+}
+.pages {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 6px; MARGIN: 0px auto; WIDTH: 632px; PADDING-TOP: 6px; HEIGHT: 14px
+}
+.pages H2 {
+	PADDING-LEFT: 10px; FLOAT: left; FONT: bold 14px "",sans-serif; WIDTH: 100px; LETTER-SPACING: 1px; HEIGHT: 14px
+}
+.pages SPAN {
+	FONT-WEIGHT: bold; FLOAT: left; WIDTH: 480px; HEIGHT: 12px; TEXT-ALIGN: left
+}
+.pages SPAN#p_nav {
+	FLOAT: right; FONT: 12px "",sans-serif; WIDTH: 340px; HEIGHT: 12px; TEXT-ALIGN: right
+}
+.pages DIV#more {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; FLOAT: right; WIDTH: 36px; FONT-FAMILY: Arial,sans-serif
+}
+.listtt {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 6px; MARGIN: 0px auto; WIDTH: 632px; PADDING-TOP: 6px; HEIGHT: 14px
+}
+.listtt H2 {
+	PADDING-LEFT: 10px; FLOAT: left; FONT: bold 14px "",sans-serif; WIDTH: 100px; LETTER-SPACING: 1px; HEIGHT: 14px
+}
+.listtt SPAN {
+	FONT-WEIGHT: bold; FLOAT: left; WIDTH: 480px; HEIGHT: 12px; TEXT-ALIGN: left
+}
+.listtt SPAN#p_nav {
+	FLOAT: right; FONT: 12px "",sans-serif; WIDTH: 340px; HEIGHT: 12px; TEXT-ALIGN: right
+}
+.pages DIV#more {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; FLOAT: right; WIDTH: 36px; FONT-FAMILY: Arial,sans-serif
+}
+#tags {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 15px; PADDING-BOTTOM: 5px; MARGIN: 0px auto; WIDTH: 637px; TEXT-INDENT: 0px; PADDING-TOP: 5px; HEIGHT: 12px
+}
+#products-list {
+	FLOAT: left; WIDTH: 652px
+}
+#products-list LI {
+	FLOAT: left; MARGIN: 5px 0px; WIDTH: 326px; HEIGHT: 120px
+}
+#products-list LI IMG {
+	FLOAT: left; WIDTH: 160px; HEIGHT: 120px
+}
+#products-list LI H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; FLOAT: right; PADDING-BOTTOM: 5px; FONT: bold 12px "",sans-serif; WIDTH: 150px; PADDING-TOP: 5px; LETTER-SPACING: 1px
+}
+#products-list LI UL {
+	FLOAT: right; WIDTH: 161px
+}
+#products-list LI UL LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 5px; WIDTH: 151px; MARGIN-RIGHT: 5px; PADDING-TOP: 5px; HEIGHT: 12px
+}
+#products-list LI UL LI SPAN {
+	FONT: bold 12px "",sans-serif; MARGIN-LEFT: 20px; COLOR: #c80000
+}
+DIV.col_center {
+	PADDING-RIGHT: 5px; MARGIN-TOP: 5px; DISPLAY: inline; PADDING-LEFT: 5px; FLOAT: left; MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 5px; OVERFLOW: hidden; WIDTH: 310px; PADDING-TOP: 5px; HEIGHT: 183px
+}
+DIV.right {
+	FLOAT: right
+}
+DIV.noborder {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.sub-title {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; MARGIN: 0px auto; WIDTH: 292px; PADDING-TOP: 6px; HEIGHT: 14px
+}
+.sub-title H2 {
+	PADDING-LEFT: 15px; FLOAT: left; FONT: bold 14px "",sans-serif; LETTER-SPACING: 1px
+}
+.sub-title SPAN {
+	DISPLAY: inline; FLOAT: right; FONT: bold 12px Arial,sans-serif; PADDING-TOP: 1px
+}
+DIV.col_center P {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 272px; TEXT-INDENT: 24px; LINE-HEIGHT: 150%; PADDING-TOP: 5px; HEIGHT: 128px
+}
+DIV.col_center UL {
+	FLOAT: left; WIDTH: 302px
+}
+DIV.col_center UL LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 4px; MARGIN-LEFT: 5px; OVERFLOW: hidden; WIDTH: 282px; PADDING-TOP: 5px; HEIGHT: 12px
+}
+DIV.col_center UL LI A {
+	COLOR: #686868
+}
+#m_adv {
+	MARGIN: 0px auto 15px; WIDTH: 652px; HEIGHT: 151px; TEXT-ALIGN: center
+}
+#m_adv IMG {
+	WIDTH: 652px; HEIGHT: 151px
+}
+#right-list {
+	MIN-HEIGHT: 600px; FLOAT: left; MARGIN-BOTTOM: 5px; WIDTH: 652px
+}
+#right-list LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 12px; FLOAT: left; PADDING-BOTTOM: 10px; MARGIN-LEFT: 15px; WIDTH: 610px; PADDING-TOP: 9px
+}
+#copyright {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 15px; MARGIN: 0px auto; WIDTH: 878px; LINE-HEIGHT: 150%; PADDING-TOP: 15px; TEXT-ALIGN: center
+}

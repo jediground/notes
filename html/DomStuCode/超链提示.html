@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+.tooltip {
+	background-color:green;
+	border-style:solid;
+	border-width:1px;
+	border-color:red;
+}
+</style>
+<script type="text/javascript">
+function initEvent(){
+	var links = document.getElementsByTagName("a");
+	for(var i=0; i<links.length; i++){
+		var link = links[i];
+		link.onmouseover = linkMouseOver;
+		link.onmouseout = linkMOuseOut;
+	}
+}
+
+function linkMouseOver(){
+	var div = document.createElement("div");//创建层
+	div.className = "tooltip";//设定样式
+	div.style.position = "absolute";
+	div.style.top = window.event.clientY;	//指定坐标		
+	div.style.left = window.event.clientX;
+	div.innerHTML = "agfd";
+	document.body.appendChild(div);//应用层
+}
+
+function linkMOuseOut(){
+	var divs = document.getElementsByTagName("div");
+	for(var i=0; divs.length; i++){
+		var div = divs[i];
+		if(div.className == "tooltip"){
+			document.body.removeChild(div);//删除层
+		}
+	}
+}
+</script>
+</head>
+
+<body onload="initEvent()">
+<a href="#">百度</a>
+<a href="#">新浪</a>
+<a href="#">新浪</a>
+<a href="#">谷歌</a>
+<a href="#">Facebook</a>
+
+</body>
+</html>

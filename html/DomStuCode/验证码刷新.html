@@ -1,0 +1,8 @@
+<script type="text/javascript">
+	function refresh(){
+		var code = document.getElementById("code");
+		code.src = "verify_code_img.php?tmd="+Math.random();
+	}
+</script>
+
+<input type="image" id="code" src='verify_code_img.php' onclick="refresh()" />

@@ -1,0 +1,53 @@
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+function indexOf(arr,element){
+		for(var i=0; i<arr.length; i++){
+			if(arr[i]==element){
+				return i;
+			}
+		}
+		return -1;
+}
+function initEvent(){
+	var tableRating = document.getElementById("tableRating");
+	var tds =tableRating.getElementsByTagName("td");//取得tableRating下所有的td，不处理其他table
+	for(var i=0; i<tds.length; i++){
+		var td = tds(i);
+		td.style.cursor = "pointer";
+		td.onclick = tdOnClick;
+	}
+}
+
+function tdOnClick(){
+	var tableRating = document.getElementById("tableRating");
+	var tds =tableRating.getElementsByTagName("td");
+	var index = indexOf(tds,this);
+	for(var i=0; i <= index; i++){
+		var td = tds[i];
+		//td.style.background = "red";
+		td.innerHTML = "<font color='orange'>★</font>";
+		//this.style.background = "red";错误
+	}
+	for(var i=index+1; i<tds.length;i++){
+		var td = tds[i];
+		//td.style.background = "white";
+		td.innerHTML = "☆";
+	}
+}
+
+
+</script>
+</head>
+
+<body onload="initEvent();">
+<table id="tableRating">
+<tr><td>☆</td><td>☆</td><td>☆</td><td>☆</td><td>☆</td></tr>
+
+</table>
+
+</body>
+</html>

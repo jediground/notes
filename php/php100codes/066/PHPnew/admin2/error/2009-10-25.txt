@@ -1,0 +1,30 @@
+错误SQL语句：
+p_newsclass where f_id=0
+客户IP:127.0.0.1
+时间 :2009-10-25 07:06:50
+
+错误SQL语句：
+p_newsclass where f_id=0
+客户IP:127.0.0.1
+时间 :2009-10-25 07:07:00
+
+错误SQL语句：
+SELECT * FROM query_contents  where ext_6='news'  order by date_time desc limit 0,30
+客户IP:127.0.0.1
+时间 :2009-10-25 08:00:32
+
+错误SQL语句：
+SELECT * FROM select * from p_newsbase 0, 30
+客户IP:127.0.0.1
+时间 :2009-10-25 08:01:16
+
+错误SQL语句：
+SELECT * FROM select * from p_newsbase limit  0, 30
+客户IP:127.0.0.1
+时间 :2009-10-25 08:01:23
+
+错误SQL语句：
+SELECT * FROM select * from p_newsbase limit  0, 30
+客户IP:127.0.0.1
+时间 :2009-10-25 08:01:31
+

@@ -1,0 +1,12 @@
+<!--
+
+  
+  //document.write("aaaa<br>bbbbb");
+  
+  if(prompt("ÇëÊäÈëÃÜÂë","")=="admin"){
+	  document.write("ÊÇ¹ÜÀíÔ±");
+	  }else{
+		document.write("ÃÜÂë´íÎó");
+		  }
+
+//-->

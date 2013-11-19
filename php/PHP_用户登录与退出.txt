@@ -1,0 +1,88 @@
+﻿PHP 用户登录与退出
+登录页面
+login.html 负责收集用户填写的登录信息。 
+
+<fieldset>
+<legend>用户登录</legend>
+<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
+<p>
+<label for="username" class="label">用户名:</label>
+<input id="username" name="username" type="text" class="input" />
+<p/>
+<p>
+<label for="password" class="label">密 码:</label>
+<input id="password" name="password" type="password" class="input" />
+<p/>
+<p>
+<input type="submit" name="submit" value="  确 定  " class="left" />
+</p>
+</form>
+</fieldset>
+javascript 检测及 CSS 样式可参考 reg.html，本部分略去，可直接查看最后附录的完整代码。 
+
+登录处理
+login.php 负责处理用户登录与退出动作。 
+
+//登录
+if(!isset($_POST['submit'])){
+    exit('非法访问!');
+}
+$username = htmlspecialchars($_POST['username']);
+$password = MD5($_POST['password']);
+
+//包含数据库连接文件
+include('conn.php');
+//检测用户名及密码是否正确
+$check_query = mysql_query("select uid from user where username='$username' and password='$password' limit 1");
+if($result = mysql_fetch_array($check_query)){
+    //登录成功
+    $_SESSION['username'] = $username;
+    $_SESSION['userid'] = $result['uid'];
+    echo $username,' 欢迎你！进入 <a href="my.php">用户中心</a><br />';
+    echo '点击此处 <a href="login.php?action=logout">注销</a> 登录！<br />';
+    exit;
+} else {
+    exit('登录失败！点击此处 <a href="javascript:history.back(-1);">返回</a> 重试');
+}
+该段代码首先确认如果是用户登录的话，必须是 POST 动作提交。然后根据用户输入的信息去数据库核对是否正确，如果正确，注册 session 信息，否则提示登录失败，用户可以重试。 
+
+该段代码需要在页面开头启用 session_start() 函数，参见下面 退出处理 代码部分。 
+
+退出处理
+处理用户退出的代码跟处理登录的代码都在 login.php 里。 
+
+session_start();
+
+//注销登录
+if($_GET['action'] == "logout"){
+    unset($_SESSION['userid']);
+    unset($_SESSION['username']);
+    echo '注销登录成功！点击此处 <a href="login.html">登录</a>';
+    exit;
+}
+该段代码在处理用户登录的代码之前，只允许以 login.php?action=logout 的方式访问，其他方式都认为是检测用户登录。具体逻辑参看附录完整代码。 
+
+用户中心
+my.php 是用户中心，列在教程里作为用户登录检测参考。 
+
+<?php
+session_start();
+
+//检测是否登录，若没登录则转向登录界面
+if(!isset($_SESSION['userid'])){
+    header("Location:login.html");
+    exit();
+}
+//包含数据库连接文件
+include('conn.php');
+$userid = $_SESSION['userid'];
+$username = $_SESSION['username'];
+$user_query = mysql_query("select * from user where uid=$userid limit 1");
+$row = mysql_fetch_array($user_query);
+echo '用户信息：<br />';
+echo '用户ID：',$userid,'<br />';
+echo '用户名：',$username,'<br />';
+echo '邮箱：',$row<'email'>,'<br />';
+echo '注册日期：',date("Y-m-d", $row['regdate']),'<br />';
+echo '<a href="login.php?action=logout">注销</a> 登录<br />';
+?>

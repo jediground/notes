@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn").click(function(){
+			var title = $("#title").val();
+			var body = $("#txt").val();	
+			var str = $("<tr><td>"+title+":</td><td>"+body+"</td></tr>"); 
+			$("#tab").append(str);
+			$("#title").val("");
+			$("#txt").val("");	
+		});	
+	});
+</script>
+</head>
+
+<body>
+	<p>我的第一个帖子</p>
+	<table id="tab">
+		<tr><td>匿名:</td><td>沙发你妹的！</td></tr>	
+		<tr><td>匿名:</td><td>沙发你妹的！</td></tr>
+		
+	</table>
+	昵称：<input type="text" id="title" /><br />
+	内容:<textarea id="txt"></textarea><br />
+	<input type="button" id="btn" value="发表评论" /><br />
+	
+	
+</body>
+</html>

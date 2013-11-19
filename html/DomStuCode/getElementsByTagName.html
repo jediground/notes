@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+/*
+	function btnClick(){
+		var inputs = document.getElementsByTagName("input");
+		for(var i=0; i<inputs.length; i++){
+			var input = inputs[i];
+			alert(input.value);
+		}
+	}
+*/
+function initEvent(){
+	var inputs = document.getElementsByTagName("input");
+	for(var i=0; i<inputs.length; i++){
+		var input = inputs[i];
+		input.onclick = btnClick;
+	}
+}
+
+function btnClick(){
+	var inputs = document.getElementsByTagName("input");
+		for(var i=0; i<inputs.length; i++){
+			var input = inputs[i];
+			if(input == window.event.srcElement){//window.event.srcElement表示被触发控件
+				input.value="^.^";
+			}
+			else{
+				input.value="-.-";
+			}
+		}
+}
+
+</script>
+</head>
+
+<body onclick="initEvent()">
+<input type="text" />
+<input type="text" />
+<input type="text" />
+<input type="button" value="byTagName" onclick="btnClick()">
+
+
+<input type="button" value="-.-" />
+<input type="button" value="-.-" />
+<input type="button" value="-.-" />
+<input type="button" value="-.-" />
+<input type="button" value="-.-" />
+
+
+
+
+
+</body>
+</html>

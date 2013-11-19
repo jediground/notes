@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//仅IE支持
+		 /*alert($.cookie("用户名"));
+		$.cookie("用户名","Eric");	*/
+		
+		//记住用户名、仅IE支持
+		if($.cookie("userName")){
+			$("#username").val($.cookie("userName"));
+		}
+		$("#btnLogin").click(function(){
+			$.cookie("userName",$("#username").val());//将用户填写 的用户名保存到cookie
+		});
+	});
+</script>
+</head>
+
+<body>
+<input type="text" id="username" />
+<input type="button" id="btnLogin" value="登录" />
+</body>
+</html>

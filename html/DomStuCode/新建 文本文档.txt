@@ -1,0 +1,37 @@
+<input type="button" value="分享本页面给好友" onclick="clipboardData.setData('Text','我发现很有趣的页面，好东西，大家应该共享！^.^'+location.href);alert('已经将地址复制到粘贴板中，使用Ctrl+v粘贴该内容');" />
+
+clipboardData.setData('Text','我发现很有趣的页面，好东西，大家应该共享'+location.href)
+
+
+我发现很有趣的页面，好东西，大家应该共享file:///D:/ASP.NET/Dom/Dom属性/index.html
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+
+
+</script>
+</head>
+
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+

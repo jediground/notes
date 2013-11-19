@@ -1,0 +1,17 @@
+
+'for' better than 'while':
+Iterator it = new iterator();
+while (it.hasNext())
+{
+	sop(it.next());
+}
+// when 'while' run done, 'it' has run in memo still
+
+for (Iterator it = new iterator(); it.hasNext();)
+{
+	sop(it.next());
+}
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	var leftSeconds = 3;
+	var intervalId;
+	$(function(){
+		$("#btnReg").attr("disabled",true);	//用attr()来设置、取得JQuery没有封装的属性
+		intervalId = setInterval("countDowm()",1000);
+	});
+	
+	$(function countDowm(){//给function包一个$()是让它在ready的时候加载
+		if(leftSeconds <= 0){
+			$("#btnReg").val("提交");	
+			$("#btnReg").attr("disabled",false);
+			clearInterval(intervalId);
+			return;
+		}
+		leftSeconds--;
+		$("#btnReg").val("请等待"+leftSeconds+"秒");	//仅IE适用
+	});
+	
+</script>
+</head>
+
+<body>
+<textarea>fagadsfdafdafdasdf</textarea>
+<input type="button" id="btnReg" value="提交" />
+
+</body>
+</html>

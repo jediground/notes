@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0023)http://www.zydh123.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./资源导航站_files/jquery-1.9.1.min.js" type="text/javascript"></script>
+<title>资源导航站</title>
+<style type="text/css">
+/*全局定义*/
+body,h1,h2,h3,h4,h5,h6,ul,li,ol,li,dl,dt,dd,input,form,strong{ margin:0; padding:0;}
+body{ font-size:12px; color:#393939; font-family: "宋体"; line-height:160%;}
+img{ border:none;}
+li{ list-style:none;}
+div{ margin:0 auto;}
+a{ color:#333333; text-decoration:none;cursor:pointer;}
+a:hover{ color: #F60; text-decoration:underline;}
+.blank{ height:13px; line-height:13px; background:#FFF;}
+.clearfix{ clear:both; height:0; line-height:0; overflow:hidden; font-size:0;}
+.w{ width:1000px;}
+.tl{ text-align:left;}
+.tr{ text-align:right;}
+.tc{ text-align:center;}
+.fl{ float:left;}
+.fr{ float:right;}
+.box-1{ border:1px solid #B9E7FE;}
+h2.title{ color:#005281; font-size:12px; background:#BBE3FA; height:24px; line-height:24px; text-indent:6px;}
+
+/*顶部*/
+.top-box{ background:#178CC8; height:33px; line-height:33px;}
+.top-box a,.top-box a:hover{ font-weight:bold; color:#FFF; margin:0 10px;}
+.top-logo-search{ height:104px;}
+.top-logo{ width:300px;}
+.top-logo h1{ margin:20px 0 0 12px;}
+.top-search{ width:498px; margin:25px 13px 0 0; display:inline;}
+.search-tabs li{ float:left; height:23px;}
+.search-tabs li a{ float:left; margin-right:3px; display: inline; height:22px; line-height:18px; text-align:center; width:33px; text-decoration:none;}
+.search-tabs li.w4 a{ width:52px;}
+.search-tabs li a.cur{ background:url(../images/search-tab.png) 0 -23px no-repeat; color:#FFF;}
+.search-tabs li.w4 a.cur{ background-position:0 0;}
+.search-keys{ background:url(../images/search.png) no-repeat; width:424px; padding-left:4px; height:31px; line-height:31px; font-family: Arial; font-size:15px; border:none; vertical-align:middle;}
+.search-submit{ background:url(../images/search.png) -428px 0 no-repeat; width:70px; font-size:14px; font-weight:bold; height:31px; display: inline-block; border:none; cursor: pointer; vertical-align:middle;}
+.search-submit:hover,.search-submit-hover{ background-position: right -31px;}
+
+/*内容开始*/
+.AREAL{ width:752px; float:left;}
+.AREAL .box-1{ width:750px; overflow:hidden;}
+.AREAR{ width:235px; float:right;}
+
+/*热门资源*/
+.hot-resource dl{ float:left; width:118px; margin:9px 0 9px 6px; display:inline;}
+.hot-resource dt{ text-indent:4px; height:18px;}
+.hot-resource dd{ height:18px; line-height:18px; overflow:hidden; margin-top:6px;}
+.hot-resource dd a{ display:inline-block; padding:0 4px; text-decoration:none;}
+.hot-resource dd a:hover{ text-decoration:none; color:#FFF; background:#FF7200;}
+/*好站*/
+.good-websites .box-1{ padding-bottom:8px;}
+.good-websites li{ float:left; width:136px; height:42px; text-align:center; margin:7px 0 0 12px; display:inline;}
+.good-websites li a{ display:block; color:#4084A6; background:#A9D6EC; cursor:pointer;}
+.good-websites li a strong{ display:block; height:25px; line-height:25px; color:#FFF; font-weight:normal; background:#1584BC; font-size:14px;}
+.good-websites .sites-list-1 li a{ background:#A9D6EC; color:#4084A6;}
+.good-websites .sites-list-1 li a strong{ background:#1584BC;}
+.good-websites .sites-list-2 li a{ background:#F69675; color:#C91818;}
+.good-websites .sites-list-2 li a strong{ background:#D82828;}
+.good-websites .sites-list-3 li a{ background:#94D54E; color:#44820D;}
+.good-websites .sites-list-3 li a strong{ background:#5B9B00;}
+.good-websites .sites-list-4 li a{ background:#FDAE61; color:#9E4E00;}
+.good-websites .sites-list-4 li a strong{ background:#F27800;}
+.good-websites .sites-list-5 li a{ background:#B1CFF8; color:#35598D;}
+.good-websites .sites-list-5 li a strong{ background:#2B5798;}
+.good-websites .sites-list-6 li a{ background:#FCDA54; color:#A35400;}
+.good-websites .sites-list-6 li a strong{ background:#CF8800;}
+/*知识讲解*/
+.news-list ul{ padding:3px 9px;}
+.news-list ul li{ background:url(../images/d.png) left bottom repeat-x; height:31px; line-height:31px; overflow:hidden;}
+.news-list ul li.last{ background:none;}
+.news-list ul li a{ background:url(../images/ico.png) 1px 50% no-repeat; padding-left:9px;}
+/*试用工具*/
+.tools-list ul{ padding:10px;}
+.tools-list li{ height:31px; margin-bottom:13px;}
+.tools-list li .ico{ float:left; display:inline; margin:3px 11px 0 0;}
+.tools-list li strong{ display:block; height:16px;}
+.tools-list li p{ margin:0 0 0 0; padding:0; color:#6E6E6E;}
+/*底部*/
+.bottom-box{ border-top:2px solid #1E98B6; background:#CBE2F2; margin:20px auto 0 auto; color:#2C2C2C; text-align:center; padding:8px 0 15px 0;}
+</script>
+
+<style type="text/css">object,embed{-webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;-ms-animation-duration:.001s;-ms-animation-name:playerInserted;-o-animation-duration:.001s;-o-animation-name:playerInserted;animation-duration:.001s;animation-name:playerInserted;}@-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}@-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style><script>window["_GOOG_TRANS_EXT_VER"] = "1";
+</script>
+
+</head>
+
+<body>
+<div class="top-box"><!--顶部-->
+    <div class="w">
+        <div class="fl">
+            <a onclick="SetHomepage();">设本站为主页</a><a onclick="AddFavorite();">收藏本站</a><a rel="weibo">分享到新浪微博</a><a rel="tqq">分享到腾讯微博</a>
+        </div>
+        <div class="fr">
+<a href="http://weibo.com/zydh123" target="_blank">论坛</a><a href="http://weibo.com/zydh123" target="_blank">意见反馈版</a><a href="http://weibo.com/zydh123" target="_blank">各站邀请码互助</a><a href="http://weibo.com/zydh123" target="_blank">推荐好站给我们</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="w">
+	<div class="top-logo-search">
+    	<div class="top-logo fl">
+        	<h1><a href="./资源导航站_files/资源导航站.html"><img src="./资源导航站_files/logo.png"></a></h1>
+        </div>
+        <div class="top-search fr">
+        	<div class="search-tabs">
+            	<ul>
+            		<li><a type="baidu" class="cur">百度</a></li>
+                    <li><a type="google">谷歌</a></li>
+                    <li><a type="bing">必应</a></li>
+                    <li class="w4"><a type="yyets">人人影视</a></li>
+                    <li class="w4"><a type="shooter">射手字幕</a></li>
+                    <li class="w4"><a type="yzdb">宇宙点播</a></li>
+                    <li class="w4"><a type="qq">腾讯视频</a></li>
+                    <li><a type="youku">优酷</a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <form id="search" target="_blank" method="get">
+                	<input type="text" class="search-keys"><input type="submit" class="search-submit" value="搜索">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="middle-box">
+	<div class="w">
+    	<div class="AREAL">
+        	<div class="hot-resource">
+                <div class="box-1">
+                    <h2 class="title">热门资源搜索</h2>
+                    <dl>
+                      <dt><strong>电影</strong></dt>
+                      <dd><a href="http://www.yzdb.tv/vod/?64277.html" target="_blank">《速度与激情6》</a></dd><dd><a href="http://www.yzdb.tv/vod/?64680.html" target="_blank">霍比特人：意外旅程</a></dd><dd><a href="http://www.yayaxz.com/resource/28117" target="_blank">兄弟出头天</a></dd><dd><a href="http://www.yzdb.tv/vod/?97021.html" target="_blank">被解放的姜戈</a></dd><dd><a href="http://www.yzys.tv/resource/28981" target="_blank">华沙间谍</a></dd><dd><a href="http://www.yzys.tv/resource/29142" target="_blank">听说桐岛要退部</a></dd><dd><a href="http://www.yzdb.tv/vod/?76030.html" target="_blank">侠探杰克</a></dd><dd><a href="http://www.yayaxz.com/resource/29146" target="_blank">全球变化最快的地方</a></dd><dd><a href="http://www.yzdb.tv/vod/?76539.html" target="_blank">背水一战</a></dd>                    </dl>
+                    <dl>
+                      <dt><strong>美剧</strong></dt>
+                      <dd><a href="http://www.yayaxz.com/resource/10733" target="_blank">权力的游戏</a></dd><dd><a href="http://www.yayaxz.com/resource/11005" target="_blank">生活大爆炸 </a></dd><dd><a href="http://www.yzdb.tv/vod/?92230.html" target="_blank">汉尼拔</a></dd><dd><a href="http://www.yzdb.tv/vod/?76865.html" target="_blank">尼基塔</a></dd><dd><a href="http://www.yzys.tv/resource/26898" target="_blank">福尔摩斯：演绎法</a></dd><dd><a href="http://www.yzys.tv/resource/29731" target="_blank">铁杉树丛</a></dd><dd><a href="http://vod.yzdb.tv/?s=%E8%BE%BE%C2%B7%E8%8A%AC%E5%A5%87%E7%9A%84%E6%81%B6%E9%AD%94" target="_blank">达·芬奇的恶魔</a></dd><dd><a href="http://www.yayaxz.com/resource/10985" target="_blank">吸血鬼日记 </a></dd><dd><a href="http://www.yayaxz.com/resource/26779" target="_blank">绿箭</a></dd>                    </dl>
+                    <dl>
+                      <dt><strong>日韩剧</strong></dt>
+                      <dd><a href="http://www.yzdb.tv/vod/?64973.html" target="_blank">神探伽利略</a></dd><dd><a href="http://www.yayaxz.com/resource/29779" target="_blank">美食刑事立花 </a></dd><dd><a href="http://www.yzdb.tv/vod/?95653.html" target="_blank">35岁的高中生</a></dd><dd><a href="http://www.zhuixinfan.com/viewtvplay-38.html" target="_blank">LEGAL HIGH SP</a></dd><dd><a href="http://www.yzdb.tv/vod/?95689.html" target="_blank">超极谜界</a></dd><dd><a href="http://www.yzdb.tv/vod/?96011.html" target="_blank">家族游戏</a></dd><dd><a href="http://www.yzdb.tv/vod/?65363.html" target="_blank">特殊案件专案组</a></dd><dd><a href="http://www.yzys.tv/resource/29771" target="_blank">潜入侦探蜥蜴</a></dd><dd><a href="http://www.yzys.tv/resource/29320" target="_blank">膝盖道士</a></dd>                    </dl>
+                    <dl>
+                      <dt><strong>动漫</strong></dt>
+                      <dd><a href="http://www.yzdb.tv/vod/?92235.html" target="_blank">钢铁侠：纳米魔崛起</a></dd><dd><a href="http://www.yzdb.tv/vod/?76822.html" target="_blank">火影忍者</a></dd><dd><a href="http://dh.bityx.com/donghua/3867/" target="_blank">新世纪福音战士新剧场版</a></dd><dd><a href="http://www.yzdb.tv/vod/?76045.html" target="_blank">十万个冷笑话 </a></dd><dd><a href="http://www.yzdb.tv/vod/?95694.html" target="_blank">海贼王</a></dd><dd><a href="http://dh.bityx.com/donghua/5593/" target="_blank">名侦探柯南</a></dd><dd><a href="http://dh.bityx.com/donghua/5602/" target="_blank">全职猎人剧场版</a></dd><dd><a href="http://dh.bityx.com/donghua/5144/" target="_blank">少年正义联盟第二季</a></dd><dd><a href="http://dh.bityx.com/donghua/5490/" target="_blank">海贼王2012剧场版</a></dd>                    </dl>
+                    <dl>
+                      <dt><strong>国产剧</strong></dt>
+                      <dd><a href="http://v.youku.com/v_show/id_XNTQ4NjM3MDQ4.html" target="_blank">金枝欲孽Ⅱ</a></dd><dd><a href="http://v.youku.com/v_show/id_XNTQwNzIxMDc2.html" target="_blank">爱的创可贴</a></dd><dd><a href="http://v.youku.com/v_show/id_XNTQ4NDA1NDM2.html" target="_blank">新编辑部故事</a></dd><dd><a href="http://v.youku.com/v_show/id_XMjI2ODE2MDQw.html" target="_blank">仁心解码</a></dd><dd><a href="http://v.youku.com/v_show/id_XNTQwMDQyOTc2.html" target="_blank">神探高伦布</a></dd><dd><a href="http://tv.letv.com/zt/najinhua/index.shtml" target="_blank">那金花和他的婿</a></dd><dd><a href="http://www.letv.com/ptv/pplay/79627/23.html" target="_blank">云上的诱惑</a></dd><dd><a href="http://www.letv.com/ptv/pplay/75976/1.html" target="_blank">X女特工</a></dd><dd><a href="http://tv.letv.com/zt/zhangyuzhen/index.shtml" target="_blank">张玉贞</a></dd>                    </dl>
+                    <dl>
+                      <dt><strong>游戏</strong></dt>
+                      <dd><a href="http://www.ali213.net/zt/bf3/" target="_blank">战地3</a></dd><dd><a href="http://www.ali213.net/zt/cod9/" target="_blank">使命召唤9 </a></dd><dd><a href="http://www.ali213.net/zt/StarCraft2/" target="_blank">星际争霸2 |</a></dd><dd><a href="http://www.ali213.net/zt/esv/" target="_blank">上古卷轴5天际 </a></dd><dd><a href="http://www.ali213.net/zt/san12/" target="_blank">三国志12</a></dd><dd><a href="http://www.3dmgame.com/games/thewitcher2/" target="_blank">巫师2</a></dd><dd><a href="http://www.3dmgame.com/games/dmc5/" target="_blank">鬼泣5</a></dd><dd><a href="http://www.3dmgame.com/games/sldo/" target="_blank">热血无赖</a></dd><dd><a href="http://www.3dmgame.com/games/mohw/" target="_blank">荣誉勋章</a></dd>                    </dl>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="blank"></div>
+            <div class="good-websites">
+                <div class="box-1">
+                    <h2 class="title">好站推荐</h2>
+                    <ul class="sites-list-1">
+                      <li><a href="http://www.yyets.com/" target="_blank"><strong>YYeTs人人影视</strong><span>海外影视字幕翻译组</span></a></li><li><a href="http://www.yayaxz.com/" target="_blank"><strong>丫丫下载站</strong><span>同步人人影视全部资源</span></a></li><li><a href="http://www.yzys.tv/" target="_blank"><strong>宇宙影视</strong><span>拥有人人影视全部数据</span></a></li><li><a href="http://www.zhuixinfan.com/" target="_blank"><strong>追新番</strong><span>日剧，动漫资源下载站</span></a></li><li><a href="http://oabt.org/" target="_blank"><strong>oabt磁力站</strong><span>最新美剧电影下载网站</span></a></li><li><a href="http://hdmeiju.com/" target="_blank"><strong>海盗美剧</strong><span>美剧片源以及字幕下载</span></a></li><li><a href="http://eztv.it/" target="_blank"><strong>EZTV</strong><span>著名美剧片源下载站</span></a></li><li><a href="http://public3d.se/" target="_blank"><strong>Public3D</strong><span>3D高清电影下载站</span></a></li><li><a href="http://publichd.se/" target="_blank"><strong>publicHD</strong><span>高清蓝光电影下载站</span></a></li><li><a href="http://kat.ph/" target="_blank"><strong>KPT</strong><span>各类资源综合下载站</span></a></li><li><a href="http://mtmju.com/" target="_blank"><strong>每天美剧</strong><span>美剧下载站</span></a></li><li><a href="http://bbs.3e-online.com/" target="_blank"><strong>3e帝国</strong><span>网盘分享资源站</span></a></li><li><a href="http://www.dytt8.net/" target="_blank"><strong>电影天堂</strong><span>电影下载站</span></a></li><li><a href="http://bt.ktxp.com/" target="_blank"><strong>极影BT站</strong><span>动漫下载网站</span></a></li><li><a href="http://www.3dmgame.com/" target="_blank"><strong>3DM</strong><span>游戏汉化与下载站</span></a></li><li><a href="http://www.ali213.net/" target="_blank"><strong>游侠网</strong><span>著名游戏下载站</span></a></li><li><a href="http://www.etdown.net/" target="_blank"><strong>光影资源联盟</strong><span>快车影视资源下载站</span></a></li><li><a href="http://tvunderground.org.ru/" target="_blank"><strong>TVU</strong><span>美剧片源电驴下载站</span></a></li><li><a href="http://www.ttmeiju.com/" target="_blank"><strong>天天美剧</strong><span>美剧片源下载站</span></a></li><li><a href="http://www.verycd.com/" target="_blank"><strong>电驴大全</strong><span>电驴下载网站</span></a></li><li><a href="http://www.torrentreactor.net/" target="_blank"><strong>TReactor</strong><span>海外著名资源下载站</span></a></li><li><a href="http://hdclub.org/" target="_blank"><strong>HDClub</strong><span>俄罗斯的高清电影下载站</span></a></li><li><a href="http://dianying.fm/" target="_blank"><strong>电影FM</strong><span>30万电影资源，想看啥就</span></a></li><li><a href="http://www.bestxl.com/" target="_blank"><strong>老调网</strong><span>中英字幕电影-高请资源</span></a></li><li><a href="http://www.66e.cc/" target="_blank"><strong>66影视网</strong><span>电影、电视剧迅雷下载</span></a></li><li><a href="http://www.113ys.com/" target="_blank"><strong>113影视</strong><span>百度影音TVB最新电视剧</span></a></li><li><a href="http://www.dlkoo.com/" target="_blank"><strong>大连生活网</strong><span>BT下载影视娱乐</span></a></li><li><a href="http://www.hjzlg.com/" target="_blank"><strong>韩剧资料馆</strong><span>最新韩剧经典韩剧</span></a></li><li><a href="http://www.hltm.cc/" target="_blank"><strong>红旅动漫</strong><span>动漫下载</span></a></li><li><a href="http://www.monova.org/" target="_blank"><strong>Monova</strong><span>老牌BT影视下载站</span></a></li><li><a href="http://www.yatu.tv/" target="_blank"><strong>雅图在线</strong><span>日本动漫排行榜</span></a></li><li><a href="http://www.6vdy.com/" target="_blank"><strong>6V电影网</strong><span>电影下载网站</span></a></li><li><a href="http://www.ahashare.com/" target="_blank"><strong>Ahashare</strong><span>国外影视游戏下载站</span></a></li><li><a href="http://www.54new.com/" target="_blank"><strong>燕子BT </strong><span>教育网BT站，学资料分享</span></a></li><li><a href="http://tscan.mg/#!/engine/torrentdownloads/category/movies" target="_blank"><strong>tscan</strong><span>影视游戏音乐下载站</span></a></li><li><a href="http://share.dmhy.org/" target="_blank"><strong>动漫花园资源网</strong><span>动漫爱好者交流平台</span></a></li><li><a href="http://www.limetorrents.com/" target="_blank"><strong>Verified下载站</strong><span>影视游戏音乐软件下载站</span></a></li><li><a href="http://www.xlpu.cc/" target="_blank"><strong>迅雷铺</strong><span>最新电影下载</span></a></li><li><a href="http://ja16.com/" target="_blank"><strong>看日剧</strong><span>日剧下载/在线</span></a></li><li><a href="http://dmxz.zerodm.net/" target="_blank"><strong>ZERO</strong><span>动漫下载，免费高清</span></a></li><li><a href="http://www.piaohua.com/" target="_blank"><strong>飘花电影网</strong><span>迅雷下载最新电影</span></a></li><li><a href="http://www.ed2kers.com//" target="_blank"><strong>ed2kers</strong><span>电驴资源下载网站</span></a></li><li><a href="http://thepiratebay.is/" target="_blank"><strong>搜索种子</strong><span>资源种子搜索</span></a></li><li><a href="http://www.tsdm.net/" target="_blank"><strong>天使动漫</strong><span>梦开始的地方</span></a></li><li><a href="http://www.gaoqing.tv/" target="_blank"><strong>高清影视下载网</strong><span>720P1080P下载</span></a></li><li><a href="http://banyungong.net/" target="_blank"><strong>搬运工</strong><span>各类资源下载</span></a></li><li><a href="http://www.an80.cc/" target="_blank"><strong>没有水的鱼</strong><span>115网盘，快传下载</span></a></li><li><a href="http://www.2tu.cc/" target="_blank"><strong>迅播影院</strong><span>迅雷电影下载</span></a></li><li><a href="http://www.ffdy.cc/" target="_blank"><strong>放放电影</strong><span>最新影视，迅雷下载</span></a></li><li><a href="http://www.xiaopian.com/" target="_blank"><strong>小调网</strong><span>免费电影—最新电影</span></a></li><li><a href="http://www.y80s.com/" target="_blank"><strong>80S手机电影</strong><span>3GP MP4电影下载</span></a></li><li><a href="http://www.6vdy.com/" target="_blank"><strong>6V电影网</strong><span>旧版88影视</span></a></li><li><a href="http://www.qqtv123.com/" target="_blank"><strong>扣扣电影网</strong><span>QVOD电影电视剧</span></a></li><li><a href="http://www.longbuluo.com/" target="_blank"><strong>龙部落</strong><span>2013最新电影下载</span></a></li><li><a href="http://www.nyaa.eu/" target="_blank"><strong>nyaa</strong><span>下载</span></a></li><li><a href="http://www.simplecd.me/" target="_blank"><strong>SimpleCD</strong><span>VeryCD之前的镜像</span></a></li><li><a href="http://bbs.hdbird.com/index.php" target="_blank"><strong>飞鸟娱乐</strong><span>高清影视下载</span></a></li><li><a href="http://www.subpig.net/" target="_blank"><strong>懂我电影网</strong><span>懂我影视 3GP MP4</span></a></li><li><a href="http://www.suppig.net/" target="_blank"><strong>猪猪乐园</strong><span>日剧字幕组，电影下载</span></a></li><li><a href="http://www.jpfad.com/bbs/index.php" target="_blank"><strong>日尚影音馆</strong><span>最新日剧日影</span></a></li><li><a href="http://www.openclasses.info/" target="_blank"><strong>公开课记录片下载网</strong><span>励志视频下载</span></a></li>                    </ul>
+                    <div class="clearfix"></div>
+                    <ul class="sites-list-2">
+                    	<li><a href="http://vod.yzdb.tv/" target="_blank"><strong>宇宙点播网-百度站</strong><span>人人影视最新资源在线看</span></a></li><li><a href="http://www.yzdb.tv/" target="_blank"><strong>宇宙点播网</strong><span>影视在线点播</span></a></li><li><a href="http://dh.bityx.com/" target="_blank"><strong>比特动画</strong><span>在线动画观看</span></a></li><li><a href="http://www.pptv.com/" target="_blank"><strong>PPTV</strong><span>著名影视观看站</span></a></li><li><a href="http://www.pps.tv/" target="_blank"><strong>PPS</strong><span>著名影视观看站</span></a></li><li><a href="http://www.kankan.com/" target="_blank"><strong>迅雷看看</strong><span>影视观看站</span></a></li><li><a href="http://www.funshion.com/" target="_blank"><strong>风行网</strong><span>影视观看站</span></a></li><li><a href="http://www.qire123.com/" target="_blank"><strong>奇热网</strong><span>在线点播站</span></a></li><li><a href="http://www.2tu.cc/" target="_blank"><strong>迅播影院</strong><span>影视点播站</span></a></li><li><a href="http://show.sohu.com/" target="_blank"><strong>搜狐秀场</strong><span>美女视频美女主播视频聊天</span></a></li><li><a href="http://www.tangdou.com/" target="_blank"><strong>糖宝网</strong><span>生活更精彩，美食时装</span></a></li>                    </ul>
+                    <div class="clearfix"></div>
+                    <ul class="sites-list-3">
+                    	<li><a href="http://www.youku.com/" target="_blank"><strong>优酷</strong><span>中国最大的视频站</span></a></li><li><a href="http://www.tudou.com/" target="_blank"><strong>土豆网</strong><span>著名在线视频站</span></a></li><li><a href="http://v.qq.com/" target="_blank"><strong>腾讯视频</strong><span>著名在线视频站</span></a></li><li><a href="http://tv.sohu.com/" target="_blank"><strong>搜狐视频</strong><span>正版最多的视频站</span></a></li><li><a href="http://www.iqiyi.com/" target="_blank"><strong>爱奇艺</strong><span>著名在线视频站</span></a></li><li><a href="http://www.letv.com/" target="_blank"><strong>乐视网</strong><span>国产影视最多的视频站</span></a></li><li><a href="http://video.sina.com.cn/" target="_blank"><strong>新浪视频</strong><span>在线视频站</span></a></li><li><a href="http://v.163.com/" target="_blank"><strong>网易视频</strong><span>公开课最多的视频站</span></a></li><li><a href="http://tv.people.com.cn/" target="_blank"><strong>凤凰视频</strong><span>最具媒介价值的视频门户</span></a></li><li><a href="http://tv.people.com.cn/" target="_blank"><strong>人民电视</strong><span>人民网</span></a></li><li><a href="http://www.youtube.com/" target="_blank"><strong>YouTube</strong><span>全球最大的视频站</span></a></li><li><a href="http://tv.cntv.cn/" target="_blank"><strong>中国网络电视台</strong><span>央视网络视频站</span></a></li><li><a href="http://www.yinyuetai.com/" target="_blank"><strong>音悦台</strong><span>音乐视频在线看</span></a></li><li><a href="http://www.1ting.com/" target="_blank"><strong>一听音乐网</strong><span>在线音乐网站</span></a></li><li><a href="http://www.6.cn/" target="_blank"><strong>六间房</strong><span>美女主播视频站</span></a></li><li><a href="http://www.77vcd.com/" target="_blank"><strong>琪琪影院</strong><span>好看影视资源</span></a></li><li><a href="http://v.360.cn/index.html" target="_blank"><strong>360影视</strong><span>最全最新最受欢迎电影网站</span></a></li><li><a href="http://video.baidu.com/" target="_blank"><strong>百度搜索视频</strong><span>全球最大的视频搜索引擎</span></a></li><li><a href="http://www.hulu.com/" target="_blank"><strong>HULU</strong><span>北美电视剧视频站</span></a></li><li><a href="http://www.leha.com/" target="_blank"><strong>乐哈电视剧网</strong><span>2013最新的电视剧 </span></a></li><li><a href="http://www.56.com/" target="_blank"><strong>56网</strong><span>中国领先的视频分享网站</span></a></li><li><a href="http://www.funshion.com/?" target="_blank"><strong>风行高清</strong><span>用风行，看最好的电影</span></a></li><li><a href="http://www.v1.cn/" target="_blank"><strong>第一视频</strong><span>最及时的新闻信息</span></a></li><li><a href="http://www.pps.tv/" target="_blank"><strong>pps网络电视</strong><span>pps陪你看电影</span></a></li><li><a href="http://v.huanqiu.com/" target="_blank"><strong>环球网视频</strong><span>视频-视频新闻时报</span></a></li><li><a href="http://www.imgo.tv/" target="_blank"><strong>芒果TV</strong><span>让电视无处不在</span></a></li><li><a href="http://xiyou.cntv.cn/" target="_blank"><strong>爱西柚</strong><span>中国网络电视台播客台</span></a></li><li><a href="http://www.m1905.com/" target="_blank"><strong>电影网M1905</strong><span>m1905</span></a></li><li><a href="http://www.joy.cn/" target="_blank"><strong>激动网</strong><span>中国领先的视频门户</span></a></li><li><a href="http://www.umiwi.com/video/" target="_blank"><strong>优米网</strong><span>视频优米网</span></a></li><li><a href="http://xiu.56.com/" target="_blank"><strong>我秀</strong><span>秀场 美女主播 视频交友</span></a></li><li><a href="http://www.uusee.com/" target="_blank"><strong>悠视网</strong><span>娱乐 资讯 体育直播电影</span></a></li><li><a href="http://www.kankanews.com/" target="_blank"><strong>看看新闻网</strong><span>专业的视频新闻网站</span></a></li><li><a href="http://www.baomihua.com/video" target="_blank"><strong>爆米花视频</strong><span>视频社区 娱乐新闻</span></a></li><li><a href="http://v.61.com/" target="_blank"><strong>淘米视频</strong><span>最新动画大片</span></a></li><li><a href="http://video.caixin.com/" target="_blank"><strong>财新网</strong><span>视听频道</span></a></li><li><a href="http://www.aipai.com/" target="_blank"><strong>爱拍原创</strong><span>年轻人的原创娱乐首选地</span></a></li><li><a href="http://www.wasu.cn/" target="_blank"><strong>华数TV</strong><span>随心看世界 高清影视剧</span></a></li><li><a href="http://www.toutiao.com/" target="_blank"><strong>头条网</strong><span>今日头条你关心的才是头条</span></a></li><li><a href="http://v.iqilu.com/" target="_blank"><strong>山东网络台</strong><span>齐鲁网山东广播电视台</span></a></li><li><a href="http://tv.tom.com/App_User_Index.php" target="_blank"><strong>TOM宽频站</strong><span>体育新闻娱乐汽车</span></a></li><li><a href="http://www.boosj.com/" target="_blank"><strong>播视网</strong><span>新视频新生活民生资讯</span></a></li><li><a href="http://v.zhiyin.cn/" target="_blank"><strong>知音视频</strong><span>影视剧原创动画</span></a></li>                    </ul>
+                    <div class="clearfix"></div>
+                    <ul class="sites-list-4">
+                    	<li><a href="https://hdbits.org/" target="_blank"><strong>HDBits</strong><span>著名高清影PT下载站</span></a></li><li><a href="https://sceneaccess.eu/" target="_blank"><strong>SCC</strong><span>著名美剧片源PT站</span></a></li><li><a href="http://freshon.tv/" target="_blank"><strong>TVT</strong><span>著名美剧片源PT站</span></a></li><li><a href="http://23.net/" target="_blank"><strong>爱上蓝光</strong><span>高清PT站</span></a></li><li><a href="http://www.learnbits.me/" target="_blank"><strong>LearnBits</strong><span>书籍软件类PT站</span></a></li><li><a href="http://www.bit-hdtv.com/" target="_blank"><strong>Bit-hdtv</strong><span>高清影视PT站</span></a></li><li><a href="http://www.bitmetv.org/" target="_blank"><strong>BitMeTV</strong><span>全球最强大的美剧PT站</span></a></li><li><a href="http://musiceye.tv/" target="_blank"><strong>Musiceye</strong><span>MV下载PT站</span></a></li>                    </ul>
+                    <div class="clearfix"></div>
+                    <ul class="sites-list-5">
+                    	<li><a href="http://www.mtime.com/" target="_blank"><strong>时光网</strong><span>国内最新影讯及订票网站</span></a></li><li><a href="http://shooter.cn/" target="_blank"><strong>射手字幕网</strong><span>影视字幕下载站</span></a></li><li><a href="http://www.opensubtitles.org/" target="_blank"><strong>多国语言字幕站</strong><span>各种语言字幕下载站</span></a></li><li><a href="http://www.addic7ed.com/" target="_blank"><strong>Addic7ed字幕站</strong><span>美剧英文字幕站</span></a></li><li><a href="http://sub.eastgame.org/" target="_blank"><strong>TLF字幕站</strong><span>著名中文字幕站</span></a></li><li><a href="http://www.yayaxz.com/subtitles" target="_blank"><strong>丫丫字幕站</strong><span>主要是人人影视的字幕</span></a></li><li><a href="http://shinybbs.com/" target="_blank"><strong>深影字幕组</strong><span>深影字幕组官方网站</span></a></li><li><a href="http://tvfantasy.net/" target="_blank"><strong>天涯小筑</strong><span>著名美剧资讯站</span></a></li><li><a href="http://www.wangpiao.com/" target="_blank"><strong>网票网</strong><span>电影订票网站</span></a></li><li><a href="http://www.1000fr.net/" target="_blank"><strong>风软字幕组</strong><span>欧美影视字幕组</span></a></li><li><a href="http://www.ragbear.com/" target="_blank"><strong>破烂熊字幕组</strong><span>欧美影视字幕组</span></a></li><li><a href="http://bbs.sfile2012.com/" target="_blank"><strong>伊甸园字幕组</strong><span>欧美影视字幕组</span></a></li><li><a href="http://share.popgo.org/" target="_blank"><strong>漫游字幕组</strong><span>动漫字幕组</span></a></li><li><a href="http://bbs.dmhy.org/forum.php" target="_blank"><strong>动漫花园字幕组</strong><span>动漫字幕组</span></a></li><li><a href="http://www.seriessub.com/" target="_blank"><strong>法国字幕组</strong><span>法国的美剧字幕组</span></a></li><li><a href="http://www.deefun.com/" target="_blank"><strong>迪幻字幕组</strong><span>专翻青少年题材美剧</span></a></li><li><a href="http://movie.douban.com/" target="_blank"><strong>豆瓣电影</strong><span>著名电影讨论社区</span></a></li><li><a href="http://subtitlesbank.com/zh/" target="_blank"><strong>SB字幕</strong><span>免费下载电影字幕</span></a></li>                    </ul>
+                    <div class="clearfix"></div>
+                    <ul class="sites-list-6">
+                    	                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    	<div class="AREAR">
+          	<div class="news-list">
+            	<div class="box-1">
+                	<h2 class="title">知识讲解</h2>
+                    <ul>
+                      <li class="last"><a href="http://test.yyets.net/TIMEM.rar" target="_blank">字幕调整与编辑软件</a></li>                    </ul>
+                </div>
+            </div>
+            <div class="blank"></div>
+            <div class="tools-list">
+            	<div class="box-1">
+                	<h2 class="title">实用工具</h2>
+                    <ul>
+                      <li>
+                          <span class="ico"><a href="http://dl.client.baidu.com/BaiduPlayer/un/BaiduPlayer_41043039.exe" target="_blank"><img src="./资源导航站_files/baidu.gif"></a></span>
+                          <strong><a href="http://dl.client.baidu.com/BaiduPlayer/un/BaiduPlayer_41043039.exe" target="_blank">百度影音</a></strong>
+                            <p>万能播放器</p>
+                        </li><li>
+                          <span class="ico"><a href="http://dl.xunlei.com/xl7.html" target="_blank"><img src="./资源导航站_files/xunlei.gif"></a></span>
+                          <strong><a href="http://dl.xunlei.com/xl7.html" target="_blank">迅雷</a></strong>
+                            <p>最强大下载软件</p>
+                        </li><li>
+                          <span class="ico"><a href="http://xf.qq.com/" target="_blank"><img src="./资源导航站_files/xuanfeng.gif"></a></span>
+                          <strong><a href="http://xf.qq.com/" target="_blank">QQ旋风</a></strong>
+                            <p>腾讯的强大下载软件</p>
+                        </li><li>
+                          <span class="ico"><a href="http://player.qq.com/" target="_blank"><img src="./资源导航站_files/qqplay.gif"></a></span>
+                          <strong><a href="http://player.qq.com/" target="_blank">QQ影音</a></strong>
+                            <p>强大的播放器</p>
+                        </li><li>
+                          <span class="ico"><a href="http://www.flashget.com/cn/" target="_blank"><img src="./资源导航站_files/kuaiche.gif"></a></span>
+                          <strong><a href="http://www.flashget.com/cn/" target="_blank">快车</a></strong>
+                            <p>著名下载软件</p>
+                        </li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="bottom-box">
+资源导航网址大全 zydh123.com<br>
+欢迎大家把优秀的资源分享网站地址告诉我们更新到本站导航去，这里为您搜集优秀的资源分享网站地址</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('a[rel=weibo],a[rel=tqq]').click(function(){
+    var url;
+    var title = encodeURIComponent('资源网站导航，zydh123.com,这里为您收集最全的资源下载站,PT站,视频站,点播站,美女美图站,影视周边站,让您的娱乐生活更加丰富,欢迎登陆我们网站 http://zydh123.com');
+    switch($(this).attr('rel')){
+      case 'weibo':
+        url = 'http://service.weibo.com/share/share.php?title='+title;
+        break;
+      case 'tqq':
+        url = 'http://share.v.t.qq.com/index.php?c=share&a=index&title='+title+'&url=&appkey=a75e1c5904c842b7b3aed10213379cca&site=zydh123.com';
+        break;
+    }
+    if(url!='') share_window(url);
+  });
+});
+var share_window=function(share_url){
+  window.open(share_url,'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+}
+var search_type = 'baidu';
+function SetHomepage(){  
+  if (document.all){
+    var url=document.URL;
+    document.body.style.behavior = 'url(#default#homepage)';  
+    document.body.setHomePage(url);
+  }
+}
+
+function AddFavorite(){
+  if(document.all){
+    var url=document.URL;  
+    var title=document.title;
+    window.external.addFavorite(url,title);
+  }
+}
+
+$('.news-list').find('li:last').addClass('last');
+$('.search-tabs').find('li a').click(function(){
+  search_type = $(this).attr('type');
+  $('.search-tabs a.cur').removeClass('cur');
+  $(this).addClass('cur');
+}).end().find('input:submit').click(function(){
+  var action,name;
+  switch(search_type){
+    case 'baidu':
+      action = 'http://www.baidu.com/s';
+      name = 'wd';
+      break;
+    case 'google':
+      action = 'https://www.google.com.hk/search';
+      name = 'q';
+      break;
+    case 'bing':
+      action = 'http://cn.bing.com/search';
+      name = 'q';
+      break;
+    case 'yyets':
+      action = 'http://www.yyets.com/search/index';
+      name = 'keyword';
+      break;
+    case 'shooter':
+      action = 'http://www.shooter.cn/sub';
+      name = 'searchword';
+      break;
+    case 'yzdb':
+      action = 'http://www.yzdb.tv/search.php';
+      name = 'keyword';
+      break;
+    case 'youku':
+      action = 'http://www.soku.com/search_video';
+      name = 'q';
+      break;
+    case 'qq':
+      action = 'http://v.qq.com/search.html';
+      name = 'ms_key';
+      break;
+  }
+  $('form#search').attr('action',action).find('input:text').attr('name',name);
+});
+</script>
+
+</body></html>

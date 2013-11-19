@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+function btnClick(btn){
+	alert(btn.value);
+}
+//this和event.srcElement的语义是不一样的，this就是表示当前监听事件的这个对象。event.srcElement是指引发事件的对象，事件冒泡。
+</script>
+</head>
+
+<body>
+<input type="button" value="Click Me" onclick="alert(event.srcElement.value);">
+<input type="button" value="Click Me" onclick="alert(this.value);"><!--this不能写在方法中代替event.srcElement-->
+<input type="button" value="Click Me" onclick="btnClick(this)">
+
+
+
+</body>
+</html>

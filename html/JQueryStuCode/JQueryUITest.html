@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.8.17.custom.css" />
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#testTab").tabs();
+	});
+</script>
+</head>
+
+<body>
+<div id="testTab">
+	<ul>
+		<li><a href="#tabBasic">基本设置</a></li>
+		<li><a href="#tabAdv">高级设置</a></li>
+	</ul>
+	<div id="tabBasic">用户名：<input type="text" /></div>
+	<div id="tabAdv">自述：<input type="text" /></div>
+</div>
+</body>
+</html>

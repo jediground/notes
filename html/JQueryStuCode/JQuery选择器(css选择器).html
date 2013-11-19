@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+.warning{
+	background-color:orange;
+	color:purple;
+}
+</style>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){$('.warning').click(function(){alert("警告！警告！");});});//根据css样式来选择事件
+</script>
+</head>
+
+<body>
+<div class="warning">
+/^(\w+\.?)*\w+@\w+\.\w+/;//<br />
+/^w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)*$/<br />
+^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+[-.]\w+)*S<br />
+/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/<br />
+<br />
+
+</div>
+</body>
+</html>

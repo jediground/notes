@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("input[name=names]").click(function(){
+			var arr = new Array(); 
+			$("input[name=names]:checked").each(function(key,value){
+				arr[key] = $(value).val();});
+			$("#msgNames").text("共选中"+arr.length+"项,分别是:"+arr.join("、"));
+		});
+	});
+</script>
+</head>
+
+<body>
+<input type="checkbox" name="names" value="Eric" />Eric
+<input type="checkbox" name="names" value="Tom" />Tom
+<input type="checkbox" name="names" value="Alex" />Alex
+<div id="msgNames"></div>
+</body>   

@@ -1,0 +1,6 @@
+<?php
+$conn = @ mysql_connect("localhost","root","") or die("数据库连接失败");  //开启mysql链接
+mysql_select_db("newdb",$conn);                                        //打开数据库  
+$sql="INSERT INTO test (id,name,regdate) values('','php100',now())";   //‘test’是nwedb下的一个数据表
+mysql_query($sql,$conn); //执行一个mysql语句  mysql_query("set names 'GBK'");//使用中文编码，解决中文乱码
+?>

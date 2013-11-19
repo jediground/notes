@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#divF").click(function(){
+		//只要在$()指定第一个参数,则第二个参数为相对的元素
+			$("ul",$(this)).css("background","blue");//第二个参数传递一个jquery对象,则相对于这个对象难进行相对的选择
+		});
+	});
+
+	$(function(){
+		$("#tab tr").click(function(){
+			$("td",$(this)).css("background","green");
+		});
+	});
+
+</script>
+</head>
+
+<body>
+
+	<div id="divF">
+		<ul>
+			<li>adladlo</li>
+			<li>dsagdsag</li>
+			<li>dasgfda</li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li>fsdhgf</li>
+			<li>rhgdfgfd</li>
+			<li>regre</li>
+		</ul>
+	</div>
+<table id="tab">
+	<tr><td>aa</td><td>bb</td></tr>
+	<tr><td>cc</td><td>dd</td></tr>
+	<tr><td>ee</td><td>ff</td></tr>
+	<tr><td>ff</td><td>gg</td></tr>
+</table>
+</body>
+</html>

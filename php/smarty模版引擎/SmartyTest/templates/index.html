@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>{$title}</title>
+</head>
+<body>
+ {section name=list loop=$article}	<!-- 循环数组(新闻内容)变量 -->
+ {$article[list].name} ----- {$article[list].date}<br />
+ {/section}
+ <hr />
+当前日期原始内容：{$date}<br />
+转换后为：{$date|date_format:'%Y-%m-%d'}
+
+<!-- 这样写也可以，是smarty内置的 -->
+smarty内置方法：{$smarty.now|date_format:'%Y-%m-%d'}
+<hr />
+截取： {$string|truncate:20:'...'}
+
+ 
+</body>
+</html>

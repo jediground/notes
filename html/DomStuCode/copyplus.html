@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+	function modifyClipboard(){
+		clipboardData.setData('Text',clipboardData.getData('Text')+'文本内容来自@@@@，转载请注明来源。'+location.href);
+}
+
+</script>
+</head>
+
+<body oncopy="setTimeout('modifyClipboard()',100)">
+<p>
+待复制内容
+。。。。。。
+。。。。。。
+</p> 
+
+</body>
+</html>

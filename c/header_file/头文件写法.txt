@@ -1,0 +1,18 @@
+func.h
+func.c
+main.c
+
+func.h	包含func.c里面要调用的库头文件，如：stdio.h/stdlib.h
+		以及func.c自己需要的特殊定义，如：#define FALSE 0;#define TRUE 1;
+		以及结构体等。
+
+		只有这样，头文件中声明函数时才不会出错。记住，一个文件中出现的
+		非c语言数据类型，必须在前文有定义
+
+func.c	包含func.h一个头文件即可(func.c需要的头文件都声明在func.h中)
+
+main.c	包含func.h即可使用func.c中的所有函数
+
+注意：在vc中编译运行的时候，自动不会添加头文件以及func.c函数文件
+	   故需要自己添加，步骤为：工程--添加到工程-文件-选择文件即可
+

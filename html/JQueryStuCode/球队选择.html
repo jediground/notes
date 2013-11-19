@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#u1 li").mouseover(function(){
+			$(this).css("background","yellow").siblings().css("background","white");	
+		}).css("cursor","pointer").click(function(){
+			$(this).css("background","white").appendTo("#u2");	
+		});	
+	});
+</script>
+</head>
+
+<body>
+<ul id="u1" style="float:left">
+	<li洛杉矶湖人></li>
+	<li>纽约尼克斯</li>
+	<li>迈阿密热火</li>
+	<li>达拉斯小牛</li>
+</ul>
+<ul id="u2"style="float:left;background:red;">
+</ul>
+</body>
+</html>

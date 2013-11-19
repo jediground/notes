@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#equal").click(function(){
+			var val1 = $("#num1").val();//.val()是一个函数不是属性《故不要忘记()	
+			var val2 = $("#num2").val();
+			val3 = parseInt(val1,10) + parseInt(val2,10);//parseInt(value,10)10指10进制
+			$("#num3").val(val3);
+		});	
+	});
+</script>
+</head>
+
+<body>
+<input type="text" id="num1" />+<input type="text" id="num2" /><input type="button" value="=" id="equal" /><input type="text" id="num3" />
+
+</body>
+</html>

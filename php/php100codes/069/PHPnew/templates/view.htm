@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{$sm_config[0]}</title>
+<link href="{$t_dir}css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$t_dir}css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{$t_dir}css/red.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="content border_bottom">
+	 <ul id="sub_nav">
+		 <li><a href="{$sm_config[0]}">设为首页</a></li>
+		 <li><a href="#">加入收藏</a></li>
+		 <li class="nobg"><a href="#">联系我们</a></li>
+	 </ul>
+	      <img src="{$t_dir}img/logo.gif" alt="居然之家" name="logo" width="200" height="75" id="logo" /><br class="clear" />
+</div>
+<div class="content dgreen-bg">
+     <div class="content">
+	 <ul id="main_nav">
+		 <li class="nobg"><a href="index.php">新闻首页</a></li>
+		{section name=l loop=$sm_class}
+		 <li><a href="list.php?cid={$sm_class[l].id}">{$sm_class[l].name}</a></li>
+		{/section}
+	 </ul><br class="clear" />
+	 </div>
+</div>
+<div class="content"><br /> 
+     <h2> {$row_news[2]}<br />
+       <br />
+     </h2>
+     时间：{$row_news[4]} 作者：{$row_news[3]}<br />
+     <br />
+     <hr />
+     <br />
+     <p>{$row_news[7]}</p>
+     <br class="clear" />
+</div>
+<div id="about">
+     <div class="content">
+	      <span class="left"><a href="#">网店首页</a> | <a href="#">公司介绍</a> | <a href="#">资质认证</a> | <a href="#">产品展示</a> | <a href="#">视频网店</a> | <a href="#">招商信息</a> | <a href="#">招聘信息</a> | <a href="#">促销活动</a> | <a href="#">企业资讯</a> | <a href="#">联系我们</a></span>
+		  <span class="right">目前已有[2222]点击</span>
+	 </div>
+</div>
+<p id="copyright">
+</p>
+</body>
+</html>

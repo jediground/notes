@@ -1,0 +1,99 @@
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	font-size:12px;
+	width:960px;
+	margin:0 auto;
+	font-size:12px;
+}
+ul {
+	list-style-type:none;
+}
+a {
+	color:#333;
+	text-decoration:none;
+}
+a:hover {
+	color:#f60;
+	text-decoration:underline;
+}
+img {
+	border:none;
+}
+#reg {
+	width:960px;
+	height:300px;	
+	font-size:12px;
+	border:1px solid #cec6c3;
+}
+#reg em{
+	color:red;
+	height:24px;
+	width:12px;
+	text-decoration: blink;
+	font-family:Verdana;
+	}
+#reg ul.tb{
+	width:800px;
+	height:38px;
+	margin:0 auto;
+	padding:10px 0 0 0;
+	border-bottom:1px dotted #cec6c3;
+	font-family:Arial Helvetica,sans-serif; 
+}
+#reg ul#top {
+	margin:0 auto;
+	width:960px;
+	height:30px;
+	line-height:26px;
+	background:#eee;
+	}
+#reg ul#top li{
+	width:475px;
+	height:20px;
+	float:left;
+	}	
+#reg ul#top li#left{
+	font-weight:bold;
+	font-size:14px;
+	text-indent:10px;
+	}	
+#reg ul#top li#right{
+	text-align:right;
+	}	
+#reg ul.tb li{
+	height:28px;
+	margin:0 auto;
+	float:left;
+}
+#reg ul.tb label{
+	cursor:pointer;
+	}	
+#reg ul.tb li.left,#reg ul.tb li.right{
+	line-height:28px;
+}
+#reg ul.tb li.left{
+	width:150px;
+	text-align:right;
+	padding-right:8px;
+	}
+#reg ul.tb li.right{
+	text-indent:8px;
+	}	
+#reg ul.tb li.center,#reg ul.tb li.right{
+	width:240Px;
+	}
+#reg ul.tb li.center input{
+	height:25px;
+	line-height:25px;
+	width:236px;
+	}	
+#reg ul#buttom{
+	border-bottom:none;
+	}
+#reg .center button{
+	width:60px;
+	cursor:pointer;	
+	}		

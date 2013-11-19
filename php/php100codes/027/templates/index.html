@@ -1,0 +1,15 @@
+<html>
+{$row[0]} |{$row[1]}
+<hr>
+
+{section name=list loop=$title}
+<!--<b><font color="#CC0033">{$title}</font></b>-->
+<b><font color="#CC0033">
+{$title[list].name} - {$title[list].date}
+</font></b><br>
+{/section}
+
+
+
+
+</html>

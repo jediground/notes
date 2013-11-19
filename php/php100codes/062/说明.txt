@@ -1,0 +1,43 @@
+PHP100开发框架底层
+
+该结构包含了 smarty mysql page 类，属于一个系统开发底层。
+
+包含了后台管理，可实现无限级别控制，已经包含登录退出管理页面
+
+数据库可以实现新闻无限分类扩展，系统配置无限增加字段扩展
+
+试用于任何系统的PHP+mysql+smarty+oop开发，一下是具体的结构图。
+
+
+PHP100_F_System 
+    ┃
+    ┣━ admin
+    ┃    ┣━ common
+    ┃    ┃     ┣━ action.class.php //后台动作类包含了权限认证等功能
+    ┃    ┃     ┗━ page.class.php   //后台分页类
+    ┃    ┃
+    ┃    ┣━ admin_global.php        //后台全局变量文件
+    ┃    ┣━ admin_left.php
+    ┃    ┣━ admin_main.php 
+    ┃    ┣━ index.php
+    ┃    ┗━ main.php
+    ┃
+    ┃     
+    ┣━ cache
+    ┃ 
+    ┣━ common
+    ┃     ┣━ smarty               //模板引擎
+    ┃     ┣━ action.class.php     //动作类
+    ┃     ┗━ mysql.class.php      // mysql数据库类
+    ┃
+    ┣━ configs
+    ┃     ┗━ config.php           //系统配置文件
+    ┃
+    ┣━ images
+    ┃     ┗━ common.css
+    ┃     
+    ┣━ templates
+    ┣━ templates_c
+    ┃
+    ┣━ global.php                 //全局变量文件
+    ┗━ index.php

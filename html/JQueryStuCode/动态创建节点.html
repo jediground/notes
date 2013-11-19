@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+	.delli{background-color:green;}	
+</style>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+	 	var link = $("<a href='http://www.baidu.com'>百度</a>");
+		$("div:first").append(link);
+	});
+
+	$(function(){
+		var data = {"Baidu":"http://www.baidu.com","Sina":"http://www.sina.com.cn"};
+		$.each(data,function(key,value){
+			var tr = $("<tr><td>"+key+"</td><td>:<a href="+value+">"+value+"</a></td></tr>");
+			$("#tab").append(tr);
+		});
+	});
+
+
+	$(function(){
+		$("#removeLi").click(function(){$("ul li.delli").remove();});//remove()可以还原，而empty()则不能还原
+
+</script>
+</head>
+
+<body>
+<div></div>
+<div id="tab"></div>
+<div>
+<ul>
+	<li>asdfno</li>
+	<li class="delli">sdagfdsaf</li>
+	<li>asdfa</li>
+	<li>rehgfds</li>
+	<li class="delli">sgffdg</li>
+	<li>dfsgbfdshdsgfs</li>
+	<li class="delli">fdsg</li>
+</ul>
+<input type="button" value="DelSomeLi" id="removeLi" />
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

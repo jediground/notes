@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+//只支持IE
+document.onmousemove = function(){
+	var x = window.event.clientX;
+	var y = window.event.clientY;
+	var divFly = document.getElementById("divFly");
+	if(!divFly){return;}
+	divFly.style.left = x;
+	divFly.style.top = y;
+}
+
+</script>
+</head>
+
+<body>
+<div id="divFly" style="position:absolute">
+<img src="pug.jpg" />
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{$sm_config[0]}</title>
+<link href="{$t_dir}css/common.css" rel="stylesheet" type="text/css" />
+<link href="{$t_dir}css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{$t_dir}css/red.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="content border_bottom">
+	 <ul id="sub_nav">
+		 <li><a href="{$sm_config[0]}">设为首页</a></li>
+		 <li><a href="#">加入收藏</a></li>
+		 <li class="nobg"><a href="#">联系我们</a></li>
+	 </ul>
+	      <img src="{$t_dir}img/logo.gif" alt="居然之家" name="logo" width="200" height="75" id="logo" /><br class="clear" />
+</div>
+<div class="content dgreen-bg">
+     <div class="content">
+	 <ul id="main_nav">
+		 <li class="nobg"><a href="index.php">新闻首页</a></li>
+		{section name=l loop=$sm_class}
+		 <li><a href="list.php?cid={$sm_class[l].id}">{$sm_class[l].name}</a></li>
+		{/section}
+	 </ul><br class="clear" />
+	 </div>
+</div>
+<div class="content"><br /> 
+     <h2> 新闻标题标题标题标题标题<br />
+       <br />
+     </h2>
+     时间：2009-1-1 作者：PHP100中文站<br />
+     <br />
+     <hr />
+     <br />
+     <p>编译PHP脚本时，PHP编译器会尽其所能报告它遇到的第一个问题。这样就产生一个问题：只有当错误出现  时，PHP才能将它识别出来（本文后面对此问题进行了详细描述）。正是由于这个缘故，编译器指出出错的那行，从表面上看来可能语法正确无误，或者可能是根  本就不存在的一行！ <br />
+       更好地理解错误信息可以大大节省确定并改正错误内容所花费的时间。因此，在本文中，我将努力阐明多种不同类型的PHP报错信息，以及在开发过程中如何正确理解各种报错信息的含义。</p>
+     <p>　　本文中所讲述的内容与您所应用的PHP的版本无关，因为本文所描述的各种错误并不限定于某一特殊版本的特定错误。另外我们假定您是一位初级或者中级程序员，并已经从事编程工作有半年或一年的时间。编译器的工作方式</p>
+     <p>　　要搞清楚编译器为什么会报告某一行上存在错误，首先必须明确编译器解析PHP代码的机制。我并不打算在本文中对此进行详细论述，但是，我们将会讨论一些更易于引发错误的简单概念。</p>
+     <p>　　变量声明</p>
+     <p>　　如果在一条语句中声明一个变量，具体方式如下所示：</p>
+     <p>$variable = 'value';</p>
+     <p>　　编译器首先求出语句右半部分的值（即等号右边的所有内容）。在一些编程书籍中，将此表示为语句的 RHS （右半部分）。恰恰正是语句的这一部分常常会引发错误。如果使用的语法不正确，就会出现解析错误。</p>
+     <p>　　解析错误</p>
+     <p>Parse error:解析错误，unexpected T_WHILE in c:\program files\apache group\apache\htdocs\script.php on line 19</p>
+     <p>　　每次确定了前一错误时，解析错误一个接一个地不断出现。因为PHP在第一个解析错误之后就停止执行脚本，调试并纠正这一系列的错误往往会让人觉得特别厌烦。</p>
+     <p>　　而且，解析错误具有很少的信息，几乎不报告错误所在的行号。具体原因就是当出现错误时，编译器判定好几行的语法看起来应该是有效的，直至遇到无效的语法，最可能的情形就是表达式中使用了预定义的字词，例如；</p>
+     <p>while = 10; // Bad ? while 就是一个预定义字词，不能分配给一个值</p>
+     <p>　　预定义的字词包括 while、function等，如果PHP使用 uses to evaluate your code. 您不能使用这些预定义字词来命名变量，而且如果您非要这样做的话，PHP就会报出更多的错误，这是您无法忍受。</p>
+     <p>　　关于这个问题，下面的示例可能会对您有所帮助。请咨询阅读一下下面所示的PHP 代码：</p>
+     <p>&lt;?php $b = &quot;somevalue&quot; if($b == &quot;somevalue&quot;)( print &quot;Hello world!&quot;; ) ?&gt;</p>
+     <p>　　错误位于&quot;$b =&quot;一行（在语句的末端缺少分号），所以错误应该是&quot;解析错误:第3行缺少分号&quot;对吧？而不应该依据解析器判定的：</p>
+     <p>Parse error: parse error, unexpected T_IF in c:\program files\apachegroup\apache\htdocs\ereg2.php on line 4</p>
+     <p><br />
+       在第4行，if() 语句的语法是正确的。那么，编译器是被什么给搞糊涂了呢？线索就是&quot;unexpected T_IF&quot; 部分。出现  &quot;unexpected T_???&quot;错误时，它所表示的含义为：编译器发现在预定义字不应该出现的位置出现。T_IF 代表 if(),  T_WHILE 代表 while(), T_FOR 代表 for()等。</p>
+     <p>　　值得庆幸的是，一些错误的原因也很简单：</p>
+     <p>　　语句没有使用分号(;)结束，比如上面的示例。字符串中缺少引号。</p>
+     <p>　　其他一些常见的错误</p>
+     <p>　　我见过的最常见的错误就是，当没有使用大括号( ) )结束一个函数或者一个循环时出现的错误，这很可能是最常见，最让人烦的错误。具体代码如下：</p>
+     <p>function UselessFunction() ( for($i &lt; 0; $i &lt; 10; $i++)( )</p>
+     <p>　　将产生下列错误：</p>
+     <p>Parse error: parse error, unexpected $ in c:\program files\apache group\apache\htdocs\ereg2.php on line 9</p>
+     <p>　　由于函数 UselessFunction 没有使用大括号( ) )来结束，PHP编译器不断查找表示结束的大括号直至到达文件末尾为止。因为编译器未找到一个匹配的大括号，就会报告文件末尾处有错误。</p>
+     <p>　　如果正确地反映了代码的层次结构，错误信息就会变得非常明显。如果没有标明代码的层次结构，那么最后要想查清楚到底忘记了什么也会变得几乎是不  可能的。所以，请记住，一定要标明代码的层次结构。Tab键可以很容易地实现这一点。对后续的开发人员来说，把握代码框架并对其进行修改也会更容易一些。</p>
+     <p>　　MySQL 错误</p>
+     <p>　　另一极其令人讨厌的错误信息就是最常见的MySQL错误，这常常使 PHP新手感到颇为头疼：</p>
+     <p>Warning: Supplied argument is not a valid MySQL result resource in...</p>
+     <p><br />
+       上面所报告有错的一行可能是：</p>
+     <p>　　while($row = mysql_fetch_array($result)) (</p>
+     <p>　　参数  $result并不是一个有效的资源。在英语中它表示因为查询失败，将无法处理mysql_fetch_array。任一查询的语法无效（您应该将查询复  制－粘贴到MySQL 控制台参考来进行测试），或者与数据库的连接失败(这种情况下您应该再次检查用户名和口令等）。</p>
+     <p>　　防止错误发生</p>
+     <p>　　第一步，智能代码器可采取以下几步来消除下列错误出现：</p>
+     <p>　　· 在每一条语句的末尾处，不必考虑添加分号——这应该成为一种习惯。</p>
+     <p>　　· 总是要尽可能标明代码的层次结构，这可以使您能够查看是否忘记在if 调用或函数末端等位置添加大括号。</p>
+     <p>　　· 请使用可突出显示语法的编辑器（如 HTML-Kit）。有了这类编辑器的辅助，您就能确定是否忘记了添加引号，是否缺少分号等。</p>
+     <p>　　结论</p>
+     <p>　　本文我们对PHP编译器可报出的一些看起来可能没有什么意义的错误有了一定的了解。我们需要将所学的知识应用到如何避免错误以及错误出现时如何纠正错误。调试是一个开发人员所有工作中的最重要的部分之一。提高调试效率可大大加快整个工作</p>
+     <br class="clear" />
+</div>
+<div id="about">
+     <div class="content">
+	      <span class="left"><a href="#">网店首页</a> | <a href="#">公司介绍</a> | <a href="#">资质认证</a> | <a href="#">产品展示</a> | <a href="#">视频网店</a> | <a href="#">招商信息</a> | <a href="#">招聘信息</a> | <a href="#">促销活动</a> | <a href="#">企业资讯</a> | <a href="#">联系我们</a></span>
+		  <span class="right">目前已有[2222]点击</span>
+	 </div>
+</div>
+<p id="copyright">
+</p>
+</body>
+</html>

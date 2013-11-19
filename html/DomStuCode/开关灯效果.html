@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+.day{
+	background-color:#fef;
+}
+.night{
+	background-color:black;
+}
+
+</style>
+<script type="text/javascript">
+function switchLight(){
+	var btnSwitch = document.getElementById("btnSwitch");
+	if(document.body.className == "day"){
+		document.body.className = "night";
+		btnSwitch.value = "开灯";
+	}
+	else{
+		document.body.className = "day";
+		btnSwitch.value = "关灯";
+	}
+}
+</script>
+</head>
+
+<body class="day">
+
+
+<input type="button" id="btnSwitch" value="开灯" onclick="switchLight()">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

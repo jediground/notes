@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+{include file="head.html" title="欢迎光临本站"}<!-- smarty内置的引入模板方法 -->
+<hr />
+{foreach from=$arr_loop item=con}
+数组内容：{$con}<br />
+{/foreach}
+<hr />
+{foreach from=$arr_loop_ item=val key=name}
+{$name}:{$val}<br />
+{/foreach}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+function toggleDiv(cb){
+	var divf = document.getElementById("divf");
+	if(cb.checked){
+		divf.style.display = "";
+	}else{
+		divf.style.display = "none";
+	}
+}
+
+</script>
+</head>
+
+<body>
+<input type="checkbox" id="cbShow" onchange="toggleDiv(this)" />
+<label for="divf">显示高级选项</label>
+<div id="divf" style="display:none;">这里是一些高级选项/div>
+
+</body>
+</html>

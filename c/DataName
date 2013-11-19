@@ -1,0 +1,59 @@
+bad:
+
+if( Flag )...
+if( StatusFlag & 0x0F )...
+if( PrintFlag == 16 )...
+if( ComputerFlag == 0 )...
+Flag         = 0x1;
+StatusFlag   = 0x80;
+PrintFlag    = 16;
+ComputerFlag = 0;
+
+good:
+if ( DataReady )...
+if ( CharacterType & PRINTABLE_CHAR )...
+if ( ReportType == AnnualRpt )...
+if ( RecalcNeeded == TRUE )...
+DataReady     = TRUE;
+CharacterType = CONTROL_CHARACTER;
+ReportType    = AnnualRpt;
+RecalcNeeded  = FALSE;
+
+
+bad:
+/* Compute root of a quadratic equation.
+This assumes that ( b^2 - 4 * a * c ) is positive. */
+Temp    = sqrt ( b^ 2 - 4 * a * c );
+root[0] = ( -b + Temp )/( 2 * a );
+root[1] = ( -b – Temp )/( 2 * a );
+
+good:
+/*
+Compute roots of a quadratic equation.
+This assumes that ( b^2 – 4 * a * c )is positive */
+Discriminant = sqrt ( b^2 - 4 * a *c );
+root[0]      = ( -b + Discriminant )/( 2 * a );
+root[1]      = ( -b - Discriminant )/( 2 * a );
+
+
+记住一些典型的逻辑变量名,done, error, found, success
+用暗含非真即假的名字来给逻辑变量命名
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

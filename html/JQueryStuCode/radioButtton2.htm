@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>欢迎光临本站！</title>
+    <script src="jquery-1.4.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#getVal").click(function() {
+                alert($(":radio[name=gender]:checked").val());
+            });
+        })
+        $(function() {
+            $("#setVal").click(function() {
+                $(":radio:checked").val(["就不告诉你"]);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="radio" name="gender" value="男" />男<br />
+<input type="radio" name="gender" value="女" />女<br />
+<input type="radio" name="gender" value="保密" />保密<br />
+<input type="button" value="设值" id="setVal" /><br />
+<input type="button" value="取值" id="getVal" />
+</body>
+</html>

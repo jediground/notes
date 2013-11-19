@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		$("#dt1").css("cursor","pointer").click(function(){
+			$("#dl1 dd").toggle("fast");	
+		});
+		
+		$("#dt2").css("cursor","pointer").click(function(){
+			$("#dl2 dd").toggle("fast");	
+		});
+		
+		$("#dt3").css("cursor","pointer").click(function(){
+			$("#dl3 dd").toggle("fast");	
+		});	
+		
+	});
+</script>
+</head>
+
+<body>
+<dl id="dl1">
+	<dt id="dt1">我的好友</dt>
+	<dd>好友1<dd/>
+	<dd>好友2<dd/>
+	<dd>好友3<dd/>
+</dl>
+
+<dl id="dl2">
+	<dt id="dt2">我的同学</dt>
+	<dd>同学1<dd/>
+	<dd>同学2<dd/>
+	<dd>同学3<dd/>
+</dl>
+
+<dl id="dl3">
+	<dt id="dt3">陌生人</dt>
+	<dd>陌生人1<dd/>
+	<dd>陌生人2<dd/>
+	<dd>陌生人3<dd/>
+</dl>
+</body>
+</html>

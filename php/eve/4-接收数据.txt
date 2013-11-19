@@ -1,0 +1,16 @@
+<?php
+	include("conn.php");     //开启mysql链接并打开数据库
+	if($_POST['submit']){
+	$sql="insert into message (id,user,title,content,lastdate) values" .
+			"('','$_POST[user]','$_POST[title]','$_POST[content]',now())";
+	mysql_query($sql);
+	echo "发表成功，自动跳转中！";
+	}
+?>
+
+  <form action="add.php" method="post">
+  用户： <input type="text" name="user" size="10" /><br />
+  标题：<input type="text" name="title" /><br />
+  内容：<textarea name="content"></textarea><br />
+  <input type=submit name="submit" value="发布留言" />
+  </form>

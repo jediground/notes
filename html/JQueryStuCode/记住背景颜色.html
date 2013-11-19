@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<style type="text/css">
+	font{cursor:pointer;}	
+</style>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#tabCol td").css("cursor","pointer").click(function(){
+			var bgCol = $(this).css("background-color");	
+			$("body").css("background-color",bgCol);
+			
+			$.cookie("lastColor",bgCol);
+		});
+		//没能实现记住皮肤功能...
+		var bgCol = $.cookie("lastColor");
+		if(bgCol){
+			$("body").css("background-color",bgCol);	
+		}
+	});
+</script>
+</head>
+
+<body>
+<table id="tabCol">
+	设置皮肤颜色：<br />
+	<tr>
+		<td style="background-color:red">红色</td>
+		<td style="background-color:green">绿色</td>
+		<td style="background-color:yellow">黄色</td>
+	</tr>
+</table>
+</body>
+</html>

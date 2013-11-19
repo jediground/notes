@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+function initEvent(){
+	var links = document.getElementsByTagName("a");
+	for(var i=0; i < links.length; i++){
+		var link = links[i];
+		link.onclick = linkOnClick;
+	}
+}
+
+function linkOnClick(){
+	var links = document.getElementsByTagName("a");
+	for(var i=0; i < links.length; i++){
+		var link = links[i];
+		if(link == this){
+			link.style.background = "red";
+		}else{
+			link.style.background = "green";
+
+		}
+	}
+	window.event.returnValue = false;//禁止打开超链接
+}
+
+</script>
+</head>
+
+<body onload="initEvent()">
+<br /><br /><br /><br />
+<a href="#">点击这里1</a>
+<a href="#">点击这里2</a>
+<a href="#">点击这里3</a>
+<a href="#">点击这里4</a>
+<a href="#">点击这里5</a>
+<a href="#">点击这里6</a>
+
+
+</body>
+</html>

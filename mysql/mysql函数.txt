@@ -1,0 +1,33 @@
+mysql内置函数：
+
+字符串函数：
+concat(string|,...|)	连接字符串
+lcase(string)		转换成小写
+ucase(string)		转换成大写
+length(string)		string长度
+ltrim(string)		去除前端空格
+rtrim(string)		去除后端空格
+repeat(string,count)	重复count次
+replace(str,search str, replase str) 在str中用replace str替换search str
+substring(str, positionp[,length]) 从str的position开始，取length个字符
+space(count)		生成count个空格
+
+数学函数：
+bin(decimal_number)	十进制转二进制
+ceiling(num)		向上去整
+floor(number)		向下取整
+max(num1,num2)		取最大值，聚合时使用
+min(num1,num2)		取最小值，聚合时使用
+sqrt(num)		开平方
+rand()			返回0-1内的随机值
+
+日期函数：
+curdate()		返回当前日期
+curtime()		返回当前时间
+now()			返回当前日期时间
+unix_timestamp(date)	返回当前date的unix时间戳
+from_unixtime()		返回unix时间戳的日期值
+week(date)		返回日期date为一年中第几周
+year(date)		返回日期date年份
+datediff(expr,expr2)	返回起始时间expr和结束时间expr2间天数
+

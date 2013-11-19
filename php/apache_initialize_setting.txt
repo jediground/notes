@@ -1,0 +1,11 @@
+±à¼­ApacheÏÂconf\httpd.conf
+
+LoadModule php5_module "c:/www/php54/php5apache2_2.dll"
+AddType application/x-httpd-php .php
+PHPIniDir "C:/www/PHP54"
+
+
+
+
+
+

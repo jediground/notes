@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title></title>
+<script src="jquery-1.4.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#tabF").click(function() { alert("tabF被点击率"); });
+        $("#trF").click(function() { alert("trF被点击率"); });
+        $("#tdF").click(function() { alert("tdF被点击率"); });
+        $("#pF").click(function(e) { alert("pF被点击率"); e.stopPropagation(); });//阻止冒泡
+		$("a").click(function(e){alert("暂不开放");e.preventDefault();});
+		$(":submit").click(function(e){if($("#name").val().length <= 0){alert("用户名不能为空");e.preventDefault();}});
+		
+    });
+</script>
+</head>
+<body>
+    <table id="tabF">
+        <tr id="trF"><td id="tdF">asd<p id="pF">asdfasd</p></p></td></tr>
+    </table>
+	<a href="#">百度一下，你就知道！</a><br />
+	<input type="text" id="name" />
+	<input type="submit" value="提交" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

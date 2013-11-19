@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >  
+<head>
+<title>欢迎光临本站！</title>
+<script type="text/javascript">
+function boom(){
+	var divF = document.getElementById("divF");
+	divF.style.width = "700px";
+	divF.style.height = "400px";
+}
+//动态放大
+var dym;
+function dymBoom(){
+	dym = setInterval("inc()",100);
+}
+
+function inc(){
+	var divF = document.getElementById("divF");
+	var oldWidth = divF.style.width;
+	oldWidth = parseInt(oldWidth,10);
+	var oldHeight = divF.style.height;
+	oldHeight = parseInt(oldHeight,10);
+	if(oldWidth >= 500){
+		//停止计时器
+		clearInterval(dym);
+	}
+	oldWidth += 10;
+	oldHeight += 10;
+	divF.style.width = oldWidth + "px";
+	divF.style.height = oldHeight + "px";
+}
+
+//动态缩小
+
+</script>
+</head>
+
+<body>
+<div id="divF" style="width:300px;height:200px;background:olive;">
+按左 Alt+左 Shift+PrtScn（或 PrtScn） 启用或关闭高对比度
+Shift+Delete 不先将所选项目移动到“回收站”而直接将其删除
+F2 重命名选定项目
+Alt+Esc 以项目打开的顺序循环切换项目
+F4 显示活动列表中的项目
+Win + E：打开我的电脑
+Win + L：锁定您的计算机或切换用户。
+Win + Home：最小化所有窗口，除了当前激活窗口。
+Ctrl+Shift+N 新建文件夹
+F11 最大化或最小化活动窗口
+Alt+P 显示预览窗格
+Alt+D 选中地址栏（定位到地址栏）
+ 写字板的键盘快捷方式 ↖
+Ctrl+B 将所选文本改为粗体
+Ctrl+I 将所选文本改为斜体
+Ctrl+U 为所选文本添加下划线
+Ctrl+= 使选择的文本成为下标
+Ctrl+Shift+= 使选择的文本成为上标
+Ctrl+L 向左对齐文本
+Ctrl+E 向中心对齐文本
+Ctrl+R 向右对齐文本
+Ctrl+J 对齐文本
+Ctrl+1 设置单倍行距
+Ctrl+2 设置双倍行距
+Ctrl+5 将行距设置为 1.5
+Ctrl+Shift+> 增加字体大小
+Ctrl+Shift+< 减小字体大小
+Ctrl+Shift+A 将字符更改为全部使用大写字母
+Ctrl+F 在文档中查找文本
+Ctrl+H 在文档中替换文本
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<input type="button" value="放大" onclick="boom()">
+<input type="button" value="动态放大" onclick="dymBoom()">
+<input type="button" value="动态缩小" onclick="dymBoom2()">
+
+</body>
+</html>
