@@ -44,8 +44,9 @@ git push origin master
 ####git reset HEAD 取消缓存已缓存的内容
 - *`git reset HEAD -- file` —— 它用来告诉 Git 这时你已经不再列选项，剩下的是文件路径了*  
 - *执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存*    
-####git rm 将文件从缓存区移除  
+
 - *`git mv git rm --cached orig; mv orig new; git add new`*  
+####git rm 将文件从缓存区移除  
 
 **示例代码：**
 ```
