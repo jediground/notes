@@ -35,6 +35,7 @@ git push origin master
 
 - *git status显示你上次提交更新至后所更改或者写入缓存的改动，而 git diff 一行一行地显示这些改动具体是啥。* 
 - *通常执行完 git status 之后接着跑一下 git diff 是个好习惯。*
+
 ####git diff --cached 查看已缓存的改动  
 ####git diff HEAD 查看已缓存的与未缓存的所有改动  
 ####git diff --stat 显示摘要而非整个 diff  
@@ -42,7 +43,8 @@ git push origin master
 ####git commit -a 自动将在提交前将已记录、修改的文件放入缓存区
 ####git reset HEAD 取消缓存已缓存的内容
 - *`git reset HEAD -- file` —— 它用来告诉 Git 这时你已经不再列选项，剩下的是文件路径了*  
-- *执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存*    
+- *执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存* 
+   
 ####git rm 将文件从缓存区移除 
 - *`git mv git rm --cached orig; mv orig new; git add new`*   
 **示例代码：**
