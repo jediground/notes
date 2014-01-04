@@ -47,6 +47,7 @@ git push origin master
    
 ####git rm 将文件从缓存区移除 
 - *`git mv git rm --cached orig; mv orig new; git add new`*   
+
 **示例代码：**
 ```
 touch file   
