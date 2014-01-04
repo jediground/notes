@@ -1,5 +1,5 @@
 ##############################
-`
+```
 git fetch origin  
 get merge origin/feature  
 
@@ -8,7 +8,7 @@ git push origin feature
 git checkout master  
 git merge feature  
 git push origin master  
-`
+```
 ##############################
 
 远程的都要加origin.使用这种形式访问origin/feature   本地直接写feature(branch)  
@@ -27,7 +27,7 @@ git push origin master
 `git commit -m “” // 快照`  
 
 ##############################
-`
+```
 touch file   
 git status -s    
 
@@ -40,7 +40,7 @@ vim file
 
 git status -s   
 git status  
-`
+```
 
 #####git add 添加文件到缓存  
 
