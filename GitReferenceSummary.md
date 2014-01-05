@@ -51,11 +51,19 @@ git push origin master
 ####git commit 记录缓存内容的快照  
 ####git commit -a 自动将在提交前将已记录、修改的文件放入缓存区
 ####git reset HEAD 取消缓存已缓存的内容
-- *`git reset HEAD -- file` —— 它用来告诉 Git 这时你已经不再列选项，剩下的是文件路径了*  
-- *执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存* 
+- `*git reset HEAD -- file —— 它用来告诉 Git 这时你已经不再列选项，剩下的是文件路径了*`    
+- `*执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存* `  
    
-####git rm 将文件从缓存区移除 
-- *`git mv git rm --cached orig; mv orig new; git add new`*   
+####git rm 将文件从缓存区移除
+- *`git mv git rm --cached orig; mv orig new; git add new*`     
+ 
+####git  reset --hard 撤销commit
+- `*git reset --hard <commit>* commit id 可以通过git log获取 `   
+- `*git reset --hard HEAD~ *`
+- `*git push origin HEAD --force*`      
+- `*如果错误的合并之后又有了新的提交，可以在完成前述正确的合并之后，通过 git rebase --onto <错误的合并提交> <正确的合并提交> <新提交所在分支> 来在正确的合并提交上重建新的提交。git rebase --onto 命令所重建的提交序列最好是线性的，否则非线性的提交会变成线性的。*`  
+   
+
 
 **示例代码：**
 ```
