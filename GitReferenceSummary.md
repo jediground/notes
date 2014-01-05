@@ -110,6 +110,11 @@ git status -s
 ####git checkout 切换到新的分支上下文
 ####git merge 将分支合并到你的当前分支
 ####git log 显示一个分支中提交的更改记录
+- `*git log --oneline 查看历史记录的紧凑简洁的版本*`   
+- `*git log --oneline --graph 开启了拓扑图选项*`   
+- `*git log --oneline --graph <branch> 查看具体分支*`  
+- `*git log --oneline feature ^master 查看feature分支但不在主分支中的提交*` 
+- `git log --oneline --decorate --graph 查看标签`  
 ####git tag 给历史记录中的某个重要的一点打上标签
 ####
 **示例代码：**
@@ -149,7 +154,12 @@ git push origin --delete tag <tagname>
 */
 
 git log
+git log --oneline
+git log --oneline --graph master
+*git log --oneline feature ^master
 
+git log -a V1.0
+it log --oneline --decorate --graph
 ```
 
 
