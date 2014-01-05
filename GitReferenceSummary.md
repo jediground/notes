@@ -12,14 +12,14 @@ git push origin master
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 远程的都要加origin.使用这种形式访问origin/feature   本地直接写feature(branch)  
-早上到公司  
+早上到公司
+`git checkout feature`    
 `git fetch origin`  
-看差异  
-`git diff feature origin/feature`  
+`git diff feature origin/feature` //看差异 
 `git merge origin/feature`  
 // coding
 走之前  
-`git push origin feature`  
+`git push origin feature`     
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -93,18 +93,51 @@ git add .
 git status -s
 
 git reset HEAD --bbbb
-git status -s
-
-
-
+git status -s  
 ```
 
+## 基本快照
+####git branch 列出、创建与管理工作上下文
+####git checkout 切换到新的分支上下文
+####git merge 将分支合并到你的当前分支
+####git log 显示一个分支中提交的更改记录
+####git tag 给历史记录中的某个重要的一点打上标签
+####
+**示例代码：**
+```
+git branch
+git branch feature // 创建新分支
+
+echo 'test content' > test.txt
+echo 'more content' > more.txt
+git add *.txt
+git commit -m 'added two files'
+ls
+
+git checkout feature
+ls // 发现新加的刚提交的更新文件这个分支里面没有
+
+git checkout -b newb //创建新分支并切换
+git branch
+ls
+git rm test.txt more.txt
+git commit -am "remove txt files"
+git checkout master
+ls
 
 
+git branch -d newb // 删除分支
+git branch
 
+// 远程分支
+git branch -r 
+git branch -a
 
+git push origin --delete feature
+// or git push origin :feature
+git push origin --delete tag <tagname>
 
-
+```
 
 
 
