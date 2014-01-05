@@ -1,3 +1,12 @@
+
+## 分支合并冲突解决
+- 注意切换分支前先commit(提交快照后，另外分支不会出现新提交的文件，防止错误发生)
+- 处理冲突前不能切换分支
+- 产生冲突文件的文件不能删除，按照提示修改(git diff)
+- 如果不小心删除了，再次merge不会合并过来的，只能拷贝一份过来
+- 解决冲突了后记得git add <filename>
+
+
 ##############################
 ```
 git fetch origin  
@@ -129,6 +138,7 @@ ls
 git branch -d newb // 删除分支
 git branch
 
+/*
 // 远程分支
 git branch -r 
 git branch -a
@@ -136,6 +146,9 @@ git branch -a
 git push origin --delete feature
 // or git push origin :feature
 git push origin --delete tag <tagname>
+*/
+
+git log
 
 ```
 
