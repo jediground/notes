@@ -1,4 +1,3 @@
-
 ## 分支合并冲突解决
 - 注意切换分支前先commit(提交快照后，另外分支不会出现新提交的文件，防止错误发生)
 - 处理冲突前不能切换分支
@@ -8,16 +7,12 @@
 
 
 ##############################
-```
-git fetch origin  
-get merge origin/feature  
-
-git push origin feature  
-
-git checkout master  
-git merge feature  
-git push origin master  
-```
+- `git fetch origin`     
+- `get merge origin/feature  `  
+- `git push origin feature  `  
+- `git checkout master  `  
+- `git merge feature  `  
+- `git push origin master  `  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 远程的都要加origin.使用这种形式访问origin/feature   本地直接写feature(branch)  
@@ -66,52 +61,49 @@ git push origin master
 
 
 **示例代码：**
-```
-touch file   
-git status -s    
++ `touch file`  
++ `git status -s`  
 
-git add .    
-git status -s     
++ `git add .`  
++ `git status -s `  
 
-// git reset HEAD  
++ `// git reset HEAD`  
 
-vim file    
++ `vim file`  
 
-git status -s   
-git status
++ `git status -s `  
++ `git status`  
 
-git diff 
-git diff --cached
-git diff HEAD  
++ `git diff`  
++ `git diff --cached`  
++ `git diff HEAD`  
 
-git config --global user.name "atcuan"
-git config --global user.email "atcuan@gmail.com"
++ `git config --global user.name "atcuan"`  
++ `git config --global user.email "atcuan@gmail.com"`  
 
-git add file
-git commit -m "commit file"
-git status
-git status -s
-
-
-vim file
-git status -s
-git commit -m "change file"
-git commit -am "change file"
++ `git add file`  
++ `git commit -m "commit file"`  
++ `git status`  
++ `git status -s`  
 
 
-vim hello
-vim bbbb
-git add .
-git commit -m ""
-vim bbbb
-git status -s
++ `vim file`  
++ `git status -s`  
++ `git commit -m "change file"`  
++ `git commit -am "change file"`  
 
-git add .
-git status -s
++ `vim hello`  
++ `vim bbbb`  
++ `git add .`  
++ `git commit -m ""`  
++ `vim bbbb`  
++ `git status -s`  
 
-git reset HEAD --bbbb
-git status -s  
-```
++ `git add .`  
++ `git status -s`  
+
++ `git reset HEAD --bbbb`  
++ `git status -s  `  
 
 ## 基本快照
 ####git branch 列出、创建与管理工作上下文
@@ -127,74 +119,44 @@ git status -s
 ####
 **示例代码：**
 ```
-git branch
-git branch feature // 创建新分支
++ `git branch`  
++ `git branch feature // 创建新分支`  
 
-echo 'test content' > test.txt
-echo 'more content' > more.txt
-git add *.txt
-git commit -m 'added two files'
-ls
++ `echo 'test content' > test.txt`  
++ `echo 'more content' > more.txt`  
++ `git add *.txt`  
++ `git commit -m 'added two files'`  
++ `ls`  
 
-git checkout feature
++ `git checkout feature`  
 ls // 发现新加的刚提交的更新文件这个分支里面没有
 
-git checkout -b newb //创建新分支并切换
-git branch
-ls
-git rm test.txt more.txt
-git commit -am "remove txt files"
-git checkout master
-ls
++ `git checkout -b newb //创建新分支并切换`  
++ `git branch`  
++ `ls`  
++ `git rm test.txt more.txt`  
++ `git commit -am "remove txt files"`  
++ `git checkout master`  
++ `ls`  
 
 
-git branch -d newb // 删除分支
-git branch
++ `git branch -d newb // 删除分支`  
++ `git branch`  
 
 /*
 // 远程分支
-git branch -r 
-git branch -a
++ `git branch -r `  
++ `git branch -a`  
 
-git push origin --delete feature
-// or git push origin :feature
-git push origin --delete tag <tagname>
++ `git push origin --delete feature`  
++ `// or git push origin :feature`  
++ `git push origin --delete tag <tagname>`  
 */
 
-git log
-git log --oneline
-git log --oneline --graph master
-*git log --oneline feature ^master
++ `git log`  
++ `git log --oneline`  
++ `git log --oneline --graph master`  
++ `*git log --oneline feature ^master`  
 
-git log -a V1.0
-it log --oneline --decorate --graph
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++ `git log -a V1.0`  
++ `it log --oneline --decorate --graph`  
