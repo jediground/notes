@@ -105,7 +105,7 @@
 + `git reset HEAD --bbbb`  
 + `git status -s  `  
 
-## 基本快照
+## 分支与合并 
 ####git branch 列出、创建与管理工作上下文
 ####git checkout 切换到新的分支上下文
 ####git merge 将分支合并到你的当前分支
