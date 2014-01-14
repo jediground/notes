@@ -18,7 +18,7 @@
 Markdown 语法说明 (简体中文版)
 ================
 
-*   [概述]「(#overview)」
+*   [概述](#overview)
     *   [宗旨](#philosophy)
     *   [兼容 HTML](#html)
     *   [特殊字符自动转换](#autoescape)
